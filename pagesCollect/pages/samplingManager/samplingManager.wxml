@@ -1,0 +1,16 @@
+<!--pagesCollect/pages/samplingManager/samplingManager.wxml-->
+<!-- <status-bar change="{{complete}}" bind:stage="switch"/> -->
+<status-bar change="{{complete}}" bind:stage="switch"/>
+<!-- 未完成 -->
+<sample-status bind:idNum="getId" wx:if="{{!complete}}"/>
+<!-- 未完成-未关联 -->
+<unrelated wx:if="{{!complete&&status==1}}" unrelated="{{sampleList}}"/>
+<!-- 未完成-未填报 -->
+<unreported wx:if="{{!complete&&status==2}}" unreported="{{sampleList}}"/>
+<!-- 已完成 -->
+<view wx:if="{{complete}}">
+    <time-filter bind:range="changeRange" bind:start="customStart" bind:end="customEnd"/>
+    <finished finished="{{sampleList}}"/>
+</view>
+
+

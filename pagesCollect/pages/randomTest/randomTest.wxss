@@ -1,0 +1,289 @@
+/* pagesCollect/pages/randomTest/randomTest.wxss */
+
+page {
+    background-color: #f2f3f5;
+}
+
+.scroll-view {
+    /* width: 500rpx; */
+    /* overflow-x: hidden; */
+    height: 400rpx;
+    min-width: 8em;
+    max-width: 24em;
+}
+
+.scroll-view2 {
+    min-width: 8em;
+    max-width: 24em;
+}
+
+.task {
+    width: 622rpx;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 24rpx;
+    padding: 32rpx;
+    font-size: 28rpx;
+}
+
+.task-title {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2rpx solid rgba(250, 250, 250, 1);
+    padding-bottom: 16rpx;
+    margin-bottom: 16rpx;
+}
+
+.tag {
+    color: rgba(128, 128, 128, 1);
+    font-size: 28rpx;
+    font-family: Alibaba-PuHuiTi-R;
+}
+
+.title {
+    color: rgba(204, 204, 204, 1);
+    font-size: 28rpx;
+    font-family: Alibaba-PuHuiTi-R;
+    position: relative;
+}
+
+.title .pic {
+    width: 18rpx;
+    height: 12rpx;
+    margin-left: 18rpx;
+}
+
+.title-option {
+    position: absolute;
+    top: 50rpx;
+    right: -36rpx;
+    background-color: #fff;
+    text-align: center;
+    border: 2rpx solid #f2f3f5;
+    border-radius: 24rpx;
+    z-index: 5;
+    height: 400rpx;
+    /* min-width: 8em;
+    max-width: 24em; */
+}
+
+.title-option-small {
+    position: absolute;
+    top: 50rpx;
+    right: -36rpx;
+    background-color: #fff;
+    text-align: center;
+    border: 2rpx solid #f2f3f5;
+    border-radius: 24rpx;
+    z-index: 5;
+    /* min-width: 8em;
+    max-width: 24em; */
+}
+
+.option {
+    padding: 18rpx;
+    line-height: 50rpx;
+    border-bottom: 2rpx solid #FAFAFA;
+    font-size: 26rpx;
+}
+
+.shop-num {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btns {
+    height: 80rpx;
+    display: flex;
+    width: 686rpx;
+    justify-content: space-between;
+    margin: 32rpx auto 80rpx;
+    font-size: 28rpx;
+}
+
+
+/* 样品采样信息样式 */
+
+
+/* components/collect/index/index.wxss */
+
+.sample-info {
+    width: 622rpx;
+    padding: 16rpx 32rpx;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 24rpx;
+    margin-bottom: 32rpx
+}
+
+.info-box {
+    margin-bottom: 32rpx;
+}
+
+.info-box .row {
+    height: 72rpx;
+    line-height: 72rpx;
+    color: #808080;
+    display: flex;
+    justify-content: space-between;
+    font-size: 28rpx;
+    border-bottom: 2rpx solid #FAFAFA
+}
+
+.row .tag {
+    height: 100%;
+    line-height: 72rpx;
+}
+
+.row .star-red {
+    line-height: 100%;
+    display: inline-block;
+    color: red;
+    font-size: 16rpx;
+    margin-right: 8rpx;
+}
+
+
+/* 最后一行 */
+
+.info-box .last {
+    height: 124rpx;
+    line-height: 124rpx;
+}
+
+.info-box .last .tag {
+    height: 124rpx;
+    line-height: 124rpx;
+}
+
+.pic-box {
+    height: 100%;
+    /* width: 500rpx; */
+    /* background-color: red; */
+    text-align: right;
+    position: relative;
+    padding-right: 50rpx;
+}
+
+.icon-code {
+    width: 28rpx;
+    height: 28rpx;
+    vertical-align: middle;
+    margin-left: 18rpx;
+}
+
+.proof {
+    width: 100rpx;
+    height: 100%;
+}
+
+.icon-add {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 32rpx;
+    height: 32rpx;
+    /* vertical-align: middle; */
+    /* margin-left: 18rpx; */
+}
+
+.fill {
+    color: black;
+    position: relative;
+}
+
+.input {
+    height: 100%;
+    line-height: 100%;
+    text-align: right;
+}
+
+.search-box {
+    background-color: #fff;
+    position: absolute;
+    padding: 18rpx;
+    top: 100%;
+    right: 0;
+    z-index: 5;
+    border: 2rpx solid #FAFAFA;
+    height: 400rpx;
+    overflow: scroll;
+}
+
+.search-box-small {
+    background-color: #fff;
+    position: absolute;
+    padding: 18rpx;
+    top: 100%;
+    right: 0;
+    z-index: 5;
+    border: 2rpx solid #FAFAFA;
+}
+
+.search-box .result {
+    height: 88rpx;
+    line-height: 88rpx;
+    text-align: center;
+}
+
+.holder {
+    color: rgba(204, 204, 204, 1);
+}
+
+.drop {
+    width: 18rpx;
+    height: 12rpx;
+    margin-left: 18rpx;
+}
+
+.icon-small {
+    vertical-align: middle;
+    margin-right: 18rpx;
+}
+
+.del-sample {
+    text-align: center;
+    font-size: 28rpx;
+    color: red;
+    margin-bottom: 32rpx;
+}
+
+.more-sample {
+    text-align: center;
+    font-size: 28rpx;
+    color: #62D664;
+}
+
+.icon-add-green {
+    width: 32rpx;
+    height: 32rpx;
+    vertical-align: middle;
+    margin-right: 18rpx;
+}
+
+
+/* 两个按钮样式 */
+
+.draft {
+    width: 326rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    border-radius: 40rpx;
+    background-color: rgba(255, 255, 255, 1);
+    border: 2rpx solid rgba(242, 242, 242, 1);
+    color: rgba(255, 197, 26, 1);
+    text-align: center;
+}
+
+.submit {
+    width: 326rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    border-radius: 40rpx;
+    background-color: rgba(255, 197, 26, 1);
+    box-shadow: 0 20rpx 20rpx 0 rgba(255, 197, 26, 0.2);
+    color: white;
+    text-align: center;
+}

@@ -1,0 +1,9 @@
+{
+    "usingComponents": {
+        "keeper": "../../../components/inspection/keeper/index",
+        "title-bar": "../../../components/inspection/title-bar/index",
+        "sample-info": "../../../components/inspection/sample-info/index"
+
+    },
+    "navigationBarTitleText": "录入快检结果"
+}

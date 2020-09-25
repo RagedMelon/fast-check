@@ -1,0 +1,7 @@
+<!--pagesCollect/pages/shopList/shopList.wxml-->
+<view class="list-box">
+    <!-- <shop-list bindtap="shopInfo" value="{{boothInfo}}"/> -->
+    <shop-list value="{{boothInfo}}" getMarketId="{{id}}"/>
+    <!-- 未完成-无未完成任务 -->
+    <empty wx:if="{{boothInfo.length==0}}" text="{{content}}"/>
+</view>

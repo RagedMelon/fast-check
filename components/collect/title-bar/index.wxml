@@ -1,0 +1,5 @@
+<!--components/collect/index/index.wxml-->
+<view class="bar">
+    <image class="pic" src="{{url}}"></image>
+    {{text}}
+</view>

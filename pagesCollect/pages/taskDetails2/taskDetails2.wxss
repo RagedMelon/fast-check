@@ -1,0 +1,82 @@
+/* pagesCollect/pages/taskDetails/taskDetails.wxss */
+
+
+/* <view class="detail-box">
+  <view class="test-type">肉类检测</view>
+  <view class="details">
+    <view>任务编号</view>
+    <view>RL-15</view>
+  </view>
+  <view class="details">
+    <view>任务编号</view>
+    <view>RL-15</view>
+  </view>
+</view> */
+
+page {
+    background-color: #f2f3f5;
+}
+
+.detail-box {
+    width: 622rpx;
+    margin: 32rpx auto;
+    background-color: #fff;
+    border-radius: 24rpx;
+    padding: 32rpx;
+    /* height: 1240rpx; */
+}
+
+.test-type {
+    color: rgba(51, 51, 51, 1);
+    font-size: 28rpx;
+    font-family: Alibaba-PuHuiTi-M;
+    height: 88rpx;
+    line-height: 88rpx;
+    font-weight: bold;
+}
+
+.details {
+    height: 72rpx;
+    line-height: 72rpx;
+    color: rgba(128, 128, 128, 1);
+    font-size: 28rpx;
+    text-align: left;
+    font-family: Alibaba-PuHuiTi-R;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2rpx solid rgba(250, 250, 250, 1);
+}
+
+.details-last {
+    height: auto;
+    padding-top: 16rpx;
+    line-height: 40rpx;
+    color: rgba(128, 128, 128, 1);
+    font-size: 28rpx;
+    text-align: left;
+    font-family: Alibaba-PuHuiTi-R;
+    display: flex;
+    justify-content: space-between;
+}
+
+.details-data {
+    color: rgba(51, 51, 51, 1);
+    text-align: right;
+    width: 446rpx;
+}
+
+.takeAction {
+    width: 686rpx!important;
+    height: 80rpx;
+    border-radius: 40px;
+    color: white;
+    font-size: 28rpx;
+    font-family: Alibaba-PuHuiTi-R;
+    background-color: rgba(255, 197, 26, 1);
+    box-shadow: 0 20rpx 20rpx 0 rgba(255, 197, 26, 0.2);
+    margin-bottom: 70rpx;
+}
+
+.done {
+    color: #79DB7B;
+}

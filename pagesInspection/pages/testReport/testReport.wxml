@@ -1,0 +1,6 @@
+<!--pagesInspection/pages/testReport/testReport.wxml-->
+<!-- <view class="header"></view> -->
+<report-info class="box" info="{{details}}"/>
+<title-bar title="{{text}}" pic="{{url}}"/>
+<report-result info="{{details}}"/>
+<view class="bottom-text">-已经到底啦-</view>

@@ -1,0 +1,192 @@
+/* pagesInspection/pages/index/index.wxss */
+
+
+/* pagesCollect/pages/index/index.wxss */
+
+
+/* 清除浮动 */
+
+page {
+    background-color: #F2F3F5
+}
+
+.clearfix {
+    overflow: auto;
+    _height: 1%;
+}
+
+.empty-box {
+    height: 600rpx;
+    overflow: hidden;
+    border-radius: 24rpx;
+}
+
+
+/* 页面样式 */
+
+.home {
+    background-color: #F2F3F5;
+    height: 100%;
+    padding-top: 32rpx;
+    padding-bottom: 100rpx;
+}
+
+.home-box {
+    width: 686rpx;
+    margin: 0 auto;
+}
+
+
+/* 轮播图 */
+
+.swiper {
+    width: 100%;
+    height: 100%;
+    border-radius: 20rpx;
+    overflow: hidden;
+    transform: translateY(0);
+    box-shadow: 0 30rpx 10rpx rgba(87, 217, 87, 0.15);
+    margin-bottom: 40rpx;
+}
+
+swiper {
+    height: 400rpx;
+}
+
+swiper-item {
+    background-color: #57D957;
+}
+
+
+/* 3个按钮 */
+
+.menu {
+    border-radius: 24rpx;
+    background-color: #fff;
+    padding: 34rpx 32rpx;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu-option {
+    text-align: center;
+}
+
+.option-pic {
+    width: 64rpx;
+    height: 64rpx;
+    display: block;
+    margin: 0 auto 18rpx;
+}
+
+.option-text {
+    color: rgba(51, 51, 51, 1);
+    font-size: 28rpx;
+    font-family: Alibaba-PuHuiTi-R;
+}
+
+
+/* 待检验列表 */
+
+.task-box {
+    margin-bottom: 16rpx;
+}
+
+.task-list {
+    padding: 34rpx 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.icon-task {
+    width: 36rpx;
+    height: 36rpx;
+    vertical-align: middle;
+    margin-right: 16rpx;
+}
+
+.msg-task {
+    color: rgba(51, 51, 51, 1);
+    font-size: 28rpx;
+    font-family: Alibaba-PuHuiTi-R;
+}
+
+.more-task {
+    text-align: right;
+    color: rgba(204, 204, 204, 1);
+    font-size: 28rpx;
+    text-align: left;
+    font-family: Alibaba-PuHuiTi-R;
+}
+
+.icon-more {
+    width: 12rpx;
+    height: 12rpx;
+    margin-left: 18rpx;
+    vertical-align: middle;
+}
+
+.task-box {
+    width: 622rpx;
+    height: 156rpx;
+    background-color: #fff;
+    border-radius: 24rpx;
+    padding: 32rpx 32rpx;
+    margin-bottom: 16rpx;
+}
+
+.task-row1 {
+    display: flex;
+    height: 40rpx;
+    justify-content: space-between;
+    margin-bottom: 32rpx;
+}
+
+.task-title {
+    color: rgba(51, 51, 51, 1);
+    font-size: 28rpx;
+    font-weight: bold;
+    font-family: Alibaba-PuHuiTi-M;
+    margin-right: 16rpx;
+}
+
+.task-status-red {
+    display: inline-block;
+    width: 120rpx!important;
+    height: 40rpx;
+    line-height: 40rpx;
+    border-radius: 20rpx;
+    border: 1px solid rgba(242, 242, 242, 1);
+    color: #FF4D4D;
+    font-size: 22rpx;
+    font-family: Alibaba-PuHuiTi-R;
+    padding: 0;
+    text-align: center;
+}
+
+.task-type {
+    height: 40rpx;
+    line-height: 40rpx;
+    color: rgba(204, 204, 204, 1);
+    font-size: 24rpx;
+    font-family: Alibaba-PuHuiTi-R;
+    /* vertical-align: bottom; */
+}
+
+.task-row2 {
+    display: flex;
+    justify-content: space-between;
+    color: rgba(128, 128, 128, 1);
+    font-size: 24rpx;
+    font-family: Alibaba-PuHuiTi-R;
+    margin-bottom: 16rpx;
+}
+
+.task-row3 {
+    display: flex;
+    justify-content: space-between;
+    color: rgba(128, 128, 128, 1);
+    font-size: 12px;
+    text-align: left;
+    font-family: Alibaba-PuHuiTi-R;
+}

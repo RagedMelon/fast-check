@@ -1,0 +1,6 @@
+<!--components/collect/index/index.wxml-->
+<view class="market-box" wx:for="{{list}}" wx:key="index" id="{{item.id}}" bindtap="shopList">
+        <view class="market-name">{{item.marketName}}</view>
+        <view class="market-num">最近抽检档口：<text>{{item.checkBooth}}</text></view>
+        <view class="market-time">最近抽检时间：<text>{{item.checkDate}}</text></view>
+</view>

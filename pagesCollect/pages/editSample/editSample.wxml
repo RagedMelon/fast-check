@@ -1,0 +1,234 @@
+<wxs module="code">
+var toHide = function(array) {
+  var newCode = array.substring(0, 1) + '*****' + array.substring(array.length-3);
+  return newCode;
+}
+module.exports.toHide = toHide;
+</wxs>
+<wxs module="idNumb">
+var toHide = function(array) {
+  var newId = array.substring(0, 4) + '**********' + array.substring(array.length-4);
+  return newId;
+}
+module.exports.toHide = toHide;
+</wxs>
+<!--pagesCollect/pages/scanSample/scanSample.wxml-->
+<title-bar title="{{text}}" pic="{{url}}"/>
+<!-- <task-related/> -->
+<!-- 关联任务选项框 -->
+<view class="task">
+    <view class="task-title">
+        <view class="tag">任务标题</view>
+        <view class="title" bindtap="showList">
+            <!-- <text class="text" style="color:{{chosenTask?'black':''}}">{{default}}</text> -->
+            <text class="text">{{taskTitle}}</text>
+            <image class="pic" src="../../../images/icon_dropdown@2x.png"></image>
+            
+        </view>
+        <view wx:if="{{taskList.length&&show}}" class="{{taskList.length>3?'title-option':'title-option-small'}}">
+            <scroll-view class="{{taskList.length>3?'scroll-view':'scroll-view2'}}" scroll-y="true" wx:if="{{show}}"  bindscrolltolower="ScrollLower">
+                <view 
+                    wx:for="{{taskList}}"
+                    class="option"
+                    data-index="{{index}}"
+                    data-name="{{item.missionName}}" 
+                    data-id="{{item.id}}"
+                    wx:key="index" bindtap="selected">
+                    {{item.missionName}}
+                </view>
+                <view class="option" hidden="{{!searchLoading}}">正在载入更多...</view>
+                <view class="option complete" hidden="{{!searchLoadingComplete}}">已加载完</view>
+            </scroll-view>
+        </view>
+    </view>
+    <view class="shop-num">
+        <view class="tag">任务编号</view>
+        <view class="num">{{taskCode}}</view>
+        <!-- <view class="holder" wx:if="{{shopNum==null}}">请先选择任务</view> -->
+
+    </view>
+</view> 
+<!-- 经营者信息 -->
+<!-- <fill-keeper/> -->
+<view >
+    <view class="owner-info">
+        <view class="title">
+        <image src="../../../images/collect/icon_operator_green@2x.png" class="icon-owner"></image>
+        <text class="tag">经营者信息</text>
+        </view>
+        <view class="switch" bindtap="hide">
+            <text >{{tip}}</text>
+            <image class="{{hide==false?'up':'down'}}" src="../../../images/icon_packup@2x.png"></image>
+        </view>
+    </view>
+    <view class="box">
+        <view class="belong row">
+            <view class="tag">所属市场</view>
+            <view class="info" wx:if="{{market}}">
+                {{market}}
+            </view>
+            <!-- <view class="holder" wx:if="{{market==null}}">请先选择任务</view> -->
+        </view>
+        <view class="name row">
+            <view class="tag">档口名称</view>
+            <view class="title" bindtap="showBoothList">
+            <!-- <text class="text" style="color:{{chosenBooth?'black':''}}">{{boothName}}</text> -->
+            <text class="text">{{boothName}}</text>
+            <image class="pic" src="../../../images/icon_dropdown@2x.png"></image>
+            
+        </view>
+        <view class="{{boothList.length>4?'title-option':'title-option-small'}}" wx:if="{{boothList.length&&showBoothList}}">
+            <scroll-view class="{{boothList.length>3?'scroll-view':'scroll-view2'}}" scroll-y="true" wx:if="{{showBoothList}}"  bindscrolltolower="ScrollLower2">
+                <view 
+                    class="option" 
+                    wx:for="{{boothList}}" 
+                    data-index="{{index}}"
+                    data-name="{{item.boothName}}" 
+                    data-id="{{item.id}}"
+                    wx:key="index" bindtap="selectedBooth">
+                    {{item.boothName}}
+                </view>
+                <view class="option" hidden="{{!searchLoading2}}">正在载入更多...</view>
+                <view class="option complete" hidden="{{!searchLoadingComplete2}}">已加载完</view>
+
+            </scroll-view>
+        </view>
+        </view>
+        <view class="info-flex" wx:if="{{!hide}}">
+            <view class="num row">
+                <view class="tag">档口编号</view>
+                <view class="info">{{boothCode}}</view>
+            </view>
+            <view class="name row">
+                <view class="tag">经营者姓名</view>
+                <view class="title" bindtap="showBusinessManList">
+                <text class="text" style="color:{{chosenBooth?'black':''}}">{{businessmanName}}</text>
+                <image class="pic" src="../../../images/icon_dropdown@2x.png"></image>
+                
+            </view>
+            <view class="list2" wx:if="{{showBoothInfo}}">
+                <view 
+                    class="name-box" 
+                    wx:for="{{boothInfo}}" 
+                    data-index="{{index}}"
+                    data-name="{{item.businessmanName}}" 
+                    data-id="{{item.id}}"
+                    wx:key="index" bindtap="selectedBusinessMan">{{item.businessmanName}}</view>
+            </view>
+            </view>
+            <view class="phone row">
+                <view class="tag">联系电话</view>
+                <view class="info">{{phone}}</view>
+            </view>
+            <view class="idNum row">
+                <view class="tag">身份证号码</view>
+                <view class="info" wx:if="{{idNumber}}">{{idNumb.toHide(idNumber)}}</view>
+            </view>
+            <view class="certificate row">
+                <view class="tag">营业执照</view>
+                <view class="info">
+                    <image class="certification" src="{{businessLicenceFileIds}}"></image>
+                </view>
+            </view>
+            
+        </view>
+        
+    </view>
+</view>
+<!-- 样品采样信息 -->
+<title-bar title="{{text2}}" pic="{{url2}}"/>
+<view class="sample-info">
+    <view class="row">
+        <view class="tag">样品码</view>
+        <view class="fill">
+            <!-- <text wx:if="{{saveData[0].sampleCode}}">{{code.toHide(saveData[0].sampleCode)}}</text> -->
+            <text wx:if="{{saveData[0].sampleCode}}">{{code.toHide(saveData[0].sampleCode)}}</text>
+            <image bindtap="scan" id="code-{{index}}" class="icon-code" src="../../../images/collect/icon_scan_yellow@2x.png"></image></view>
+    </view>
+    <view class="row">
+            <view class="tag">样品名称</view>
+            <view  class="fill">
+                <input 
+                class="input" 
+                placeholder="请输入样品名称"
+                placeholder-class="holder"
+                value="{{sampleName}}"
+                bindinput="bindSampleName"/>
+            <view class="{{searchList.length>4?'search-box':'search-box-small'}}" wx:if="{{showSearch&&searchList.length>0}}">
+                <!-- <view class="search-box" wx:if="{{nameList[index].length>0&&searchResult.length>0}}"> -->
+                    <view 
+                        class="result" 
+                        wx:for="{{searchList}}" 
+                        wx:key="index"
+                        wx:for-index="result"
+                        data-name="{{item.productName}}"
+                        data-index="{{result}}"
+                        catchtap="chooseProductName">
+                            {{item.productName}}
+                    </view>
+                </view>
+            </view>
+        </view>
+    
+    <view class="row">
+        <view class="tag">进货日期</view>
+        <picker mode="date" value="{{date}}" bindchange="bindDateChange">
+            <!-- <view class="{{change?'fill':'holder'}}"> -->
+            <view class="fill">
+                {{date}}<image class="drop" src="../../../images/icon_dropdown@2x.png"></image>
+            </view>
+        </picker>
+    </view>
+    <view class="row">
+        <view class="tag">样品产地</view>
+        <view class="fill">
+        <input 
+            class="input" 
+            placeholder="请输入样品产地" 
+            bindinput="bindPlace"
+            value="{{place}}"
+            placeholder-class="holder"/></view>
+    </view>
+    <view class="row">
+        <view class="tag">供应商名称</view>
+        <view class="fill">
+        <input 
+            class="input" 
+            placeholder="请输入供应商名称" 
+            bindinput="bindSupplier"
+            value="{{supplier}}"
+            placeholder-class="holder"/></view>
+    </view>
+    <view class="row">
+        <view class="tag">采样时间</view>
+        <picker mode="date" value="{{date2}}" bindchange="bindDateChange2">
+            <view class="fill">
+                {{date2}}<image class="drop" src="../../../images/icon_dropdown@2x.png"></image>
+            </view>
+        </picker>
+    </view>
+    <view class="row last">
+        <view class="tag">证明材料</view>
+        <view class='pic-box'>
+                <text wx:if="{{pics.length==0}}">只支持jpg、png格式</text>
+                <!-- <text>只支持jpg、png格式</text> -->
+                <image 
+                    class="proof" 
+                    wx:for="{{pics}}" 
+                    wx:for-item="proof"
+                    wx:for-index="num"
+                    wx:key="index"
+                    src="{{proof}}"></image>
+                <image catchtap="upload" class="icon-add" src="../../../images/collect/icon_add_yellow@2x.png"></image>
+        </view>
+        <!-- <view>只支持jpg、png格式<image bindtap="upload" class="icon-add" src="../../../images/collect/icon_add_yellow@2x.png"></image></view> -->
+    </view>
+</view>
+
+<!-- <fill-sample-info/> -->
+
+<!-- 底部按钮 -->
+<view class="btns">
+    <view class="draft" bindtap="draft">草稿</view>
+    <view class="submit" bindtap="submit">提交</view>
+</view>

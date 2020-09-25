@@ -1,0 +1,10 @@
+{
+    "usingComponents": {
+        "status-bar": "../../../components/inspection/status-bar/index",
+        "time-filter": "../../../components/inspection/time-filter/index",
+        "filter": "../../../components/inspection/filter/filter",
+        "sample-passed": "../../../components/inspection/sample-passed/index",
+        "sample-failed": "../../../components/inspection/sample-failed/sample-failed"
+    },
+    "navigationBarTitleText": "台账管理"
+}

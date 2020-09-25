@@ -1,0 +1,10 @@
+{
+    "navigationBarBackgroundColor": "#57D957",
+    "navigationBarTitleText": "检验报告",
+    "navigationBarTextStyle": "white",
+    "usingComponents": {
+        "report-info": "../../../components/inspection/report-info/index",
+        "title-bar": "../../../components/inspection/title-bar/index",
+        "report-result": "../../../components/inspection/report-result/index"
+    }
+}

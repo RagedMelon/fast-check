@@ -1,0 +1,11 @@
+{
+    "usingComponents": {
+        "title-bar": "../../../components/inspection/title-bar/index",
+        "deal-sample": "../../../components/inspection/deal-sample/index",
+        "deal-project": "../../../components/inspection/deal-project/index",
+        "deal-method": "../../../components/inspection/deal-method/index"
+
+
+    },
+    "navigationBarTitleText": "处理"
+}

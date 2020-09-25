@@ -1,0 +1,17 @@
+<!--components/inspection/index/index.wxml--><view class="deal-box">
+    <view class="row">
+        <view >处理数量</view>
+        <view class="amount">
+            <input class="input grey" type="text" placeholder="请输入处理数量" placeholder-class="grey"/> <view class="black"> kg</view>
+        </view>
+    </view>
+    <view class="row">
+        <view >处理方式</view>
+        <view class="grey">请选择处理方式 <image class="icon" src="../../../images/icon_dropdown@2x.png"></image></view>
+    </view>
+    <view class="row">
+        <view >拍照留证</view>
+        <view class="grey">最多十张，只支持jpg/png格式<image class="icon-cam" src="../../../images/icon_camera_yellow@2x.png"></image></view>
+    </view>
+    <view class="tips"><text class="red">*</text>不合格产品处理选择销毁时，照片必须能体现效果全过程，包括不合格产品剩余数量、处理过程和处理结果。</view>
+</view>

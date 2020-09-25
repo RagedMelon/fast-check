@@ -1,0 +1,9 @@
+{
+    "usingComponents": {
+        "sample": "../../../components/inspection/sample/index",
+        "status-bar": "../../../components/inspection/status-bar/index",
+        "filter": "../../../components/inspection/filter/filter",
+        "empty": "../../../components/inspection/empty/index"
+    },
+    "navigationBarTitleText": "样品管理"
+}

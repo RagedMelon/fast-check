@@ -1,0 +1,32 @@
+/* components/collect/index/index.wxss */
+
+.market-box {
+    padding: 32rpx;
+    margin-bottom: 16rpx;
+    height: 188rpx;
+    border-radius: 24rpx;
+    background-color: rgba(255, 255, 255, 1);
+    font-family: Alibaba-PuHuiTi-M;
+}
+
+.market-name {
+    color: rgba(51, 51, 51, 1);
+    font-size: 28rpx;
+    font-family: Alibaba-PuHuiTi-M;
+    height: 72rpx;
+    font-weight: bold;
+}
+
+.market-num {
+    color: rgba(128, 128, 128, 1);
+    font-size: 24rpx;
+    font-family: Alibaba-PuHuiTi-R;
+    height: 50rpx;
+}
+
+.market-time {
+    color: rgba(128, 128, 128, 1);
+    font-size: 24rpx;
+    font-family: Alibaba-PuHuiTi-R;
+    height: 50rpx;
+}

@@ -1,0 +1,49 @@
+<!--pagesInspection/pages/deal/deal.wxml-->
+<deal-sample getInfo="{{details}}"/>
+<deal-project getInfo="{{details}}"/>
+<title-bar title="{{text}}" pic="{{url}}"/>
+<!-- <deal-method/> -->
+<view class="deal-box">
+    <view class="row">
+        <view >处理数量</view>
+        <view class="amount">
+            <input 
+                class="input" 
+                type="text" 
+                placeholder="请输入处理数量" 
+                bindconfirm="getWeight"
+                bindblur="getWeight"
+                placeholder-class="grey"/> <view class="black"> kg</view>
+        </view>
+    </view>
+    <view class="row">
+        <view >处理方式</view>
+        <view class="black" catchtap="showMethods">{{methodDefault}} <image class="icon" src="../../../images/icon_dropdown@2x.png"></image></view>
+        <view class="methodList" wx:if="{{showList}}">
+            <view 
+                wx:for="{{methods}}"
+                wx:key="index" 
+                data-method="{{item}}"
+                catchtap="getMethod"
+                class="method">{{item}}</view>
+        </view>
+    </view>
+    <view class="pic-row">
+        <view >拍照留证</view>
+        <view class="grey pic-box">
+            <text wx:if="{{pics.length==0}}">最多十张，只支持jpg/png格式</text>
+            <image 
+                wx:for="{{pics}}"
+                wx:key="index"
+                wx:for-item="pic"
+                src="{{pic}}" 
+                class="photo"></image>
+            <image catchtap="upload" class="icon-cam" src="../../../images/icon_camera_yellow@2x.png"></image></view>
+    </view>
+    <view class="tips"><text class="red">*</text>不合格产品处理选择销毁时，照片必须能体现效果全过程，包括不合格产品剩余数量、处理过程和处理结果。</view>
+</view>
+
+<view class="btn">
+    <!-- <view class="cancel">取消</view> -->
+    <view class="submit" catchtap="submit">提交</view>
+</view>

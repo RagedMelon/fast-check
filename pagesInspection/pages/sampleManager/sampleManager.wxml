@@ -1,0 +1,20 @@
+<!--pagesInspection/pages/sampleManager/sampleManager.wxml-->
+<status-bar bind:stage="switch" comeBack="{{option}}"/>
+<!-- <status-bar bind:stage="switch" change="{{option}}"/> -->
+<filter 
+    wx:if="{{option!=0}}" 
+    second="{{resultFilter}}" 
+    items="{{resultStatus}}" 
+    default="{{resultDefault}}" 
+    bind:range="changeRange" 
+    bind:status="changeStatus" 
+    bind:start="customStart" 
+    bind:end="customEnd"/>
+<!-- <sample bindtap="readIn" samples="{{sampleList}}"/> -->
+<sample samples="{{sampleList}}"/>
+<view class="empty-box">
+    <empty wx:if="{{sampleList.length==0}}" text="{{noSample}}"/>
+</view>
+
+
+

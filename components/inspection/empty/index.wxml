@@ -1,0 +1,6 @@
+<!--components/collect/index/index.wxml-->
+<!-- <view wx:if="{{incomplete==0&&option==0}}" class="table-no"> -->
+<view class="table-no">
+    <view><image class="pic" src="../../../images/collect/pic_nodata@2x.png"></image></view>
+    <view>{{content}}</view>
+</view>

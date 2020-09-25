@@ -1,0 +1,68 @@
+<!--pagesCollect/pages/staticAnalysis/staticAnalysis.wxml-->
+<view class="statics-page">
+  <!-- <filter second="{{marketFilter}}" items="{{marketName}}" default="{{marketDefault}}"/> -->
+  <!-- 筛选器 -->
+  <view class="filter">
+    <!-- 日期筛选 -->
+    <view class='range'>
+      <view class='range-text'>{{monthFilter}}</view>
+      <!-- 下拉框 -->
+      <picker mode="date" fields="month" value="{{date}}" bindchange="getDateTime">
+        <view class='range-selected'>
+          <text class="text" style="color: {{rangeText > 0 ? 'black' : ''}}">{{year}}年{{month}}月</text>
+          <image class="pic" src='../../../images/collect/icon_dropdown@2x.png'></image>
+        </view>
+    </picker>
+    </view>
+    <!-- 市场筛选 -->
+    <view class='second'>
+      <view class='second-text'>{{marketFilter}}</view>
+      <!-- 下拉框 -->
+      <view class='second-selected' bindtap='bindShowsecond'>
+        <text class="text" style="color: black">{{marketDefault}}</text>
+        <image class="pic" src='../../../images/collect/icon_dropdown@2x.png'></image>
+      </view>
+      <!-- 下拉需要显示的列表 -->
+      <!-- <view class="select-box" wx:if="{{secondSelect}}"> -->
+      <view class="select-box" wx:if="{{marketSelect}}">
+        <view wx:for="{{marketList}}" wx:key="index" wx:for-index="bindex">
+          <view class="select-one" bindtap="secondChosen" data-id="{{item.id}}">{{item.marketName}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 数据总结 -->
+  <view class="statics-num">
+    <view class="row row1">
+      <view class="item item1">
+        <view class="num"><text>{{dataInfo.hasCheckTimes}}</text>/{{dataInfo.checkTimes}}</view>
+        <view class="text">已完成/检查项目数</view>
+      </view>
+      <view class="item">
+        <view class="num">{{rate1}}%</view>
+        <view class="text">重点品种抽检率</view>
+      </view>
+    </view>
+    <view class="row">
+      <view class="item item1">
+        <view class="num">{{rate2}}%</view>
+        <view class="text">检验合格率</view>
+      </view>
+      <view class="item">
+        <view class="num">{{rate3}}%</view>
+        <view class="text">市场覆盖率</view>
+      </view>
+    </view>
+  </view>
+  <!-- 图表 -->
+  <view class="charts">
+      <image src="../../../images/collect/icon_statistical_green@2x.png" class="icon-charts"></image>
+      <text class="msg-charts">统计视图</text>
+  </view>
+  
+  <view class="wrap">
+    <!-- <ec-canvas id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{ ec }}"></ec-canvas> -->
+    <ec-canvas id="mychart-one" canvas-id="mychart-multi-one" ec="{{ ec }}"></ec-canvas>
+  </view>
+ 
+</view>

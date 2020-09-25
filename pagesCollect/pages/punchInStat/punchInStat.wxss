@@ -1,0 +1,105 @@
+/* pagesCollect/pages/punchInStat/punchInStat.wxss */
+
+page {
+    background-color: #f2f3f5;
+}
+
+.statPage {
+    width: 686rpx;
+    margin: 0 auto;
+}
+
+.overview {
+    background-color: #fff;
+    margin: 32rpx auto;
+    height: 250rpx;
+    border-radius: 24rpx;
+}
+
+.month {
+    padding: 32rpx;
+    color: rgba(51, 51, 51, 1);
+    font-size: 28rpx;
+    font-weight: bold;
+    font-family: Alibaba-PuHuiTi-M;
+}
+
+.month image {
+    width: 18rpx;
+    height: 10rpx;
+    line-height: 10rpx;
+    margin-left: 18rpx;
+    vertical-align: middle;
+}
+
+.stat {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.stat .num {
+    color: rgba(255, 197, 26, 1);
+    font-size: 48rpx;
+    text-align: center;
+    font-family: Alibaba-PuHuiTi-M;
+}
+
+.stat .text {
+    color: rgba(128, 128, 128, 1);
+    font-size: 28rpx;
+    text-align: center;
+    font-family: Alibaba-PuHuiTi-R;
+}
+
+.record {
+    margin-bottom: 32rpx;
+}
+
+.msg-record {
+    width: 686rpx;
+    margin: 0 auto;
+    color: rgba(51, 51, 51, 1);
+    font-size: 28rpx;
+    font-family: Alibaba-PuHuiTi-R;
+}
+
+.icon-record {
+    width: 36rpx;
+    height: 36rpx;
+    vertical-align: middle;
+    margin-right: 16rpx;
+}
+
+.table {
+    background-color: #fff;
+    border-radius: 24rpx;
+    margin: 16rpx 0;
+}
+
+.table .info {
+    color: rgba(128, 128, 128, 1);
+    font-size: 28rpx;
+    font-family: Alibaba-PuHuiTi-R;
+    padding: 32rpx;
+    display: flex;
+    justify-content: space-between;
+}
+
+.table-no {
+    background-color: #fff;
+    border-radius: 24rpx;
+    margin: 16rpx 0;
+    height: 1046rpx;
+    text-align: center;
+    color: rgba(153, 153, 153, 1);
+    font-size: 28rpx;
+    text-align: center;
+    font-family: Alibaba-PuHuiTi-R;
+}
+
+.table-no image {
+    width: 256rpx;
+    margin: 160rpx 0 32rpx;
+    height: 168rpx;
+}

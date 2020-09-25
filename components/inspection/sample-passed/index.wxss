@@ -1,0 +1,136 @@
+/* components/collect/index/index.wxss */
+
+.sample-item {
+    width: 686rpx;
+    margin: 16rpx auto;
+    /* height: 274rpx; */
+    /* border-radius: 24rpx; */
+    /* background-color: rgba(255, 255, 255, 1); */
+    /* padding: 32rpx; */
+}
+
+.main {
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 24rpx;
+    padding: 32rpx;
+}
+
+.sub {
+    margin-top: 16rpx;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 24rpx;
+    padding: 32rpx;
+}
+
+.sub-2 {
+    margin-top: 16rpx;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 24rpx;
+    padding: 32rpx;
+    /* display: flex;
+    justify-content: space-between; */
+}
+
+.sub-2 .empty {
+    display: flex;
+    justify-content: space-between;
+}
+
+.item-title {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 16rpx;
+}
+
+.title {
+    color: rgba(51, 51, 51, 1);
+    font-size: 28rpx;
+    font-family: Alibaba-PuHuiTi-M;
+}
+
+.time {
+    color: rgba(204, 204, 204, 1);
+    font-size: 24rpx;
+    text-align: right;
+    font-family: Alibaba-PuHuiTi-R;
+}
+
+.item-info {
+    color: rgba(128, 128, 128, 1);
+    font-size: 24rpx;
+    text-align: left;
+    font-family: Alibaba-PuHuiTi-R;
+    margin-top: 16rpx;
+}
+
+.row2 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.item-category {
+    display: flex;
+    justify-content: space-between;
+}
+
+.last {
+    height: 48rpx;
+    line-height: 48rpx;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn {
+    width: 160rpx;
+    height: 48rpx;
+    line-height: 48rpx;
+    border-radius: 24rpx;
+    background-color: rgba(255, 197, 26, 1);
+    box-shadow: 0 20rpx 20rpx 0 rgba(255, 197, 26, 0.2);
+    text-align: center;
+    color: white;
+}
+
+.switch {
+    /* margin-top: 16rpx; */
+    color: rgba(204, 204, 204, 1);
+    font-size: 28rpx;
+    font-family: Alibaba-PuHuiTi-R;
+    text-align: center;
+}
+
+.switch .up {
+    width: 18rpx;
+    height: 12rpx;
+    vertical-align: middle;
+    margin-left: 18rpx;
+    /* transform: rotate(180deg); */
+    transition: All 0.3s ease-in-out;
+}
+
+.switch .down {
+    width: 18rpx;
+    height: 12rpx;
+    vertical-align: middle;
+    margin-left: 18rpx;
+    transform: rotate(180deg);
+    transition: All 0.3s ease-in-out;
+}
+
+.positive {
+    color: red;
+}
+
+.negative {
+    color: green;
+}
+
+
+/* .record {
+    margin-top: 16rpx;
+} */
+
+
+/* .record .title {
+    padding: 32rpx 0;
+} */

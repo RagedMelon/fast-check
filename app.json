@@ -1,0 +1,62 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/logs/logs"
+    ],
+    "permission": {
+        "scope.userLocation": {
+            "desc": "你的位置信息将用于小程序位置接口的效果展示"
+        }
+    },
+    "subpackages": [{
+            "root": "pagesCollect",
+            "pages": [
+                "pages/index/index",
+                "pages/scanSample/scanSample",
+                "pages/scanBusinessCode/scanBusinessCode",
+                "pages/editSample/editSample",
+                "pages/editUnreported/editUnreported",
+                "pages/punchIn/punchIn",
+                "pages/punchInStat/punchInStat",
+                "pages/taskManager/taskManager",
+                "pages/taskDetails/taskDetails",
+                "pages/taskDetails2/taskDetails2",
+                "pages/myAccount/myAccount",
+                "pages/reset/reset",
+                "pages/marketManager/marketManager",
+                "pages/shopList/shopList",
+                "pages/randomTest/randomTest",
+                "pages/shopInfo/shopInfo",
+                "pages/samplingManager/samplingManager",
+                "pages/staticAnalysis/staticAnalysis"
+            ]
+        },
+        {
+            "root": "pagesInspection",
+            "name": "pack2",
+            "pages": [
+                "pages/index/index",
+                "pages/sampleManager/sampleManager",
+                "pages/accountManager/accountManager",
+                "pages/readIn/readIn",
+                "pages/scanReadIn/scanReadIn",
+                "pages/reInspect/reInspect",
+                "pages/testReport/testReport",
+                "pages/deal/deal",
+                "pages/dealRecord/dealRecord",
+                "pages/staticAnalysis/staticAnalysis",
+                "pages/myAccount/myAccount",
+                "pages/reset/reset"
+            ]
+        }
+    ],
+
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "智慧快检",
+        "navigationBarTextStyle": "black"
+    },
+    "style": "v2",
+    "sitemapLocation": "sitemap.json"
+}

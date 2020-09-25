@@ -1,0 +1,42 @@
+
+<view class="homePage">
+  <!-- <view><image class="loginPic" src="../../images/pic_login_bg.png" mode="bottom"></image></view> -->
+  <view class="head">
+    <image class="loginPic" src="../../images/pic_login_bg.png"></image>
+    <text class="platformName">智慧快检综合管理平台</text>
+    <view class="login-box">
+      <view class='second'>
+        <!-- 下拉框 -->
+        <view class='second-selected' bindtap='bindShowsecond'>
+          <view>
+          <image class="icon" src='../../images/icon_login_system@2x.png'></image>
+          <text class="text" style="color: {{secondText != 0 ? 'black' : ''}}">{{secondDefault}}</text>
+          </view>
+          <!-- <text class="text" style="color: {{secondText != 0 ? 'black' : ''}}">{{client}}</text> -->
+          <image class="pic" src='../../images/icon_dropdown@2x.png'></image>
+        </view>
+        <!-- 下拉需要显示的列表 -->
+        <view class="select-box" wx:if="{{secondSelect}}">
+          <view wx:for="{{secondItems}}" wx:key="unique" wx:for-index="bindex">
+            <view class="select-one" bindtap="secondChosen" data-name="{{item.option}}" id="{{item.id}}" data-bindex='{{bindex}}'>{{item.option}}</view>
+          </view>
+        </view>
+      </view>
+      <!-- 用户名 -->
+      <view class="row">
+        <image class="icon" src="../../images/icon_login_acount@2x.png"></image>
+        <input class="input" value="{{nameVal}}" placeholder="请输入用户名" placeholder-class="grey" bindinput="bindUserName" />
+      </view>
+      <!-- 密码 -->
+      <view class="row">
+        <image class="icon" src="../../images/icon_login_password@2x.png"></image>
+        <input class="input" value="{{passWordVal}}" type="password" placeholder="请输入密码" placeholder-class="grey" bindinput="bindPassWord"/>
+        <!-- <input class="input" value="{{passWordVal}}" placeholder="请输入密码" placeholder-class="grey" bindinput="bindPassWord"/> -->
+      </view>
+      <!-- <view class="btn" bindtap="goIndex">登录</view> -->
+      <button id="btn" class="btn" bindtap="goIndex" open-type='getUserInfo'>登录</button>
+    </view>
+    
+  </view>
+ 
+</view>

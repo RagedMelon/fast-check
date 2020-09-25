@@ -1,0 +1,10 @@
+/* pagesInspection/pages/sampleManager/sampleManager.wxss */
+
+page {
+    background-color: #f2f3f5;
+}
+
+.empty-box {
+    width: 686rpx;
+    margin: 0 auto;
+}

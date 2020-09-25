@@ -1,0 +1,40 @@
+<!--components/collect/index/index.wxml-->
+<!-- 样品码隐藏 -->
+<wxs module="sampleCode">
+var toHide = function(array) {
+  var newCode = array.substring(0, 1) + '*****' + array.substring(array.length-3);
+  return newCode;
+}
+module.exports.toHide = toHide;
+</wxs>
+<view 
+    class="sample-item" 
+    wx:for="{{list}}" 
+    wx:key="index" 
+    bindtap="submit"
+    data-index="{{index}}"
+    data-marketid="{{item.boothInfoDto.marketId}}"
+    id="{{item.id}}">
+    <view class="item-title">
+        <view class="title">{{item.businessProductDto.productName}}</view>
+        <view class="time">{{item.sampleDate}}</view>
+    </view>
+    <view class="item-info">
+        市场名称：{{item.boothInfoDto.marketName}}
+    </view>
+    <view class="item-info">
+        档口名称：{{item.boothInfoDto.boothName}}
+    </view>
+    <view class="item-info">
+        经营者姓名：{{item.businessmanDto.businessmanManager}}
+    </view>
+    <view class="item-info item-category">
+        商品类型：{{item.businessProductDto.primaryTypeName}}
+    </view><view class="item-info item-category">
+        <!-- <view >样品码：{{item.code}}</view> -->
+        <view wx:if="{{item.sampleCode}}">样品码：{{sampleCode.toHide(item.sampleCode)}}</view>
+        
+        <!-- <view class="btn" catchtap="submit" data-samplecode="{{item.sampleCode}}">填报</view> -->
+        <view class="btn" data-samplecode="{{item.sampleCode}}">填报</view>
+    </view>
+</view>

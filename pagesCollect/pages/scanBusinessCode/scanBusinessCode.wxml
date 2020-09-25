@@ -1,0 +1,64 @@
+<!--pagesCollect/pages/shopInfo/shopInfo.wxml-->
+<!-- <keeper booth="{{boothInfo}}" certifi="{{businessPic}}" bindgetcodes="getcodes"/> -->
+<wxs module="idNumber">
+var toHide = function(array) {
+  var newId = array.substring(0, 4) + '**********' + array.substring(array.length-4);
+  return newId;
+}
+module.exports.toHide = toHide;
+</wxs>
+<view >
+    <view class="owner-info">
+        <view class="title">
+        <image src="../../../images/collect/icon_operator_green@2x.png" class="icon-owner"></image>
+        <text>经营者信息</text>
+        </view>
+        <view class="switch" bindtap="hide">
+            <text >{{tip}}</text>
+            <image class="{{hide==false?'up':'down'}}" src="../../../images/icon_packup@2x.png"></image>
+        </view>
+    </view>
+    <view class="box">
+        <view class="belong row">
+            <view class="tag">所属市场</view>
+            <view class="info">{{boothInfo.marketName}}</view>
+        </view>
+        <view class="name row">
+            <view class="tag">档口名称</view>
+            <view class="info">{{boothInfo.boothName}}</view>
+        </view>
+        <view class="info-flex" wx:if="{{!hide}}">
+            <view class="num row">
+                <view class="tag">档口编号</view>
+                <view class="info">{{boothInfo.boothCode}}</view>
+            </view>
+            <view class="owner row">
+                <view class="tag">
+                    <!-- <image class="drop" src="../../../images/icon_dropdown@2x.png"></image> -->
+                    经营者姓名
+                </view>
+                <view class="info name" bindtap="changeName">
+                    {{boothInfo.businessmanName}}
+                </view>
+            </view>
+            <view class="phone row">
+                <view class="tag">联系电话</view>
+                <view class="info">{{boothInfo.phone}}</view>
+            </view>
+            <view class="idNum row">
+                <view class="tag">身份证号码</view>
+                <view class="info" wx:if="{{boothInfo.idNumber}}">{{idNumber.toHide(boothInfo.idNumber)}}</view>
+            </view>
+            <view class="certificate row">
+                <view class="tag">营业执照</view>
+                <view class="info">
+                    <image class="certification" src="{{businessLicenceFileIds}}"></image>
+                </view>
+            </view>
+        </view>
+        
+    </view>
+</view>
+
+<random-record month="{{monthRecord}}"/>
+<view class="random" bindtap="random">我要抽检</view>

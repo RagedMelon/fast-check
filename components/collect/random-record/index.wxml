@@ -1,0 +1,34 @@
+<!--components/collect/index/index.wxml-->
+<view class="record">
+    <view class="title">
+        <image class="pic" src="../../../images/icon_samplerec_yellow@2x.png"></image>
+        <view class="text">近30天抽检记录</view>
+    </view>
+    <view class="record-list">
+        <view class="item-record" wx:for="{{record}}" wx:key="index" wx:if="{{index<2&&more==false}}">
+            <view class="food">
+                <view class="food-name">{{item.productName}}</view>
+                <view class="food-time">{{item.sampleDate}}</view>
+            </view>
+            <view class="tested" wx:for="{{item.checkItems}}" wx:for-item="i" wx:key="index">
+                <view class="element">{{i.reagentName}}</view>
+                <view class="positive" wx:if="{{inspectResult=='POSITIVE'}}">阳性</view>
+                <view class="negative" wx:if="{{inspectResult=='NEGATIVE'}}">阴性</view>
+            </view>
+        </view>
+        <view class="item-record" wx:for="{{record}}" wx:key="index" wx:if="{{more==true}}">
+            <view class="food">
+                <view class="food-name">{{item.productName}}</view>
+                <view class="food-time">{{item.sampleDate}}</view>
+            </view>
+            <view class="tested" wx:for="{{item.checkItems}}" wx:for-item="i" wx:key="index">
+                <view class="element">{{i.reagentName}}</view>
+                <view class="positive" wx:if="{{inspectResult=='POSITIVE'}}">阳性</view>
+                <view class="negative" wx:if="{{inspectResult=='NEGATIVE'}}">阴性</view>
+            </view>
+        </view>
+        <view class="more" bindtap="expand">
+            显示更多<image class="{{more===true?'up':'down'}}" src="../../../images/icon_dropdown@2x.png"></image>
+        </view>
+    </view>
+</view>

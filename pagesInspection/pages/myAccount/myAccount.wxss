@@ -1,0 +1,103 @@
+/* pagesCollect/pages/myAccount/myAccount.wxss */
+
+page {
+    background-color: #f2f3f5;
+}
+
+.header {
+    height: 160rpx;
+    background-color: #57D957;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 32rpx;
+}
+
+.header-box {
+    width: 686rpx;
+    margin: 50rpx auto;
+    display: flex;
+}
+
+.header-left,
+.header-right {
+    width: 50%;
+}
+
+.header-left .name {
+    color: rgba(255, 255, 255, 1);
+    font-size: 32rpx;
+    font-family: Alibaba-PuHuiTi-M;
+    margin-bottom: 16rpx;
+}
+
+.header-left .department {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 28rpx;
+    font-family: Alibaba-PuHuiTi-R;
+    width: 600rpx;
+}
+
+.header-right {
+    text-align: right;
+    /* width: 100rpx;
+    height: 100rpx; */
+    border-radius: 50%;
+}
+
+.header-right image {
+    width: 100rpx;
+    height: 100rpx;
+    border-radius: 50%;
+}
+
+.info {
+    color: rgba(51, 51, 51, 1);
+    font-size: 32rpx;
+    font-family: Alibaba-PuHuiTi-R;
+    background-color: #fff;
+    margin: 32rpx 0 16rpx;
+}
+
+.info-box {
+    width: 686rpx;
+    margin: 0 auto;
+    /* margin: 32rpx auto 16rpx; */
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2rpx solid rgba(250, 250, 250, 1);
+}
+
+.info-box view {
+    height: 112rpx;
+    line-height: 112rpx;
+}
+
+.info-box .icon {
+    width: 36rpx;
+    height: 40rpx;
+    vertical-align: middle;
+    margin-right: 16rpx;
+}
+
+.info-box .arrow-right image {
+    width: 16rpx;
+    height: 16rpx;
+    vertical-align: middle;
+}
+
+.logout-box {
+    height: 112rpx;
+    background-color: rgba(255, 255, 255, 1);
+    line-height: 112rpx;
+    width: 686rpx;
+    margin: 0 auto;
+    height: 112rpx;
+    line-height: 112rpx;
+}
+
+.logout {
+    height: 112rpx;
+    background-color: rgba(255, 255, 255, 1);
+    line-height: 112rpx;
+}

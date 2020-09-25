@@ -1,0 +1,61 @@
+<!--pagesCollect/pages/shopInfo/shopInfo.wxml-->
+<!-- 身份证隐藏代码块 -->
+<wxs module="idNumber">
+var toHide = function(array) {
+  var newId = array.substring(0, 4) + '**********' + array.substring(array.length-4);
+  return newId;
+}
+module.exports.toHide = toHide;
+</wxs>
+<view >
+    <view class="owner-info">
+        <view class="title">
+        <image src="../../../images/collect/icon_operator_green@2x.png" class="icon-owner"></image>
+        <text>经营者信息</text>
+        </view>
+        <view class="switch" bindtap="hide">
+            <text >收起</text>
+            <image class="{{hide==false?'up':'down'}}" src="../../../images/icon_packup@2x.png"></image>
+        </view>
+    </view>
+    <view class="box">
+        <view class="belong row">
+            <view class="tag">所属市场</view>
+            <!-- <view class="info">{{msg.boothInfoDto.marketName}}</view> -->
+            <view class="info">{{msg.boothInfoDto.marketName}}</view>
+        </view>
+        <view class="name row">
+            <view class="tag">档口名称</view>
+            <view class="info">{{msg.boothInfoDto.boothName}}</view>
+        </view>
+        <view class="info-flex" wx:if="{{!hide}}">
+            <view class="num row">
+                <view class="tag">档口编号</view>
+                <view class="info">{{msg.boothInfoDto.boothCode}}</view>
+            </view>
+            <view class="owner row">
+                <view class="tag">经营者姓名</view>
+                <view class="info">{{msg.businessmanDto.businessmanManager}}</view>
+            </view>
+            <view class="phone row">
+                <view class="tag">联系电话</view>
+                <view class="info">{{msg.businessmanDto.phone}}</view>
+            </view>
+            <view class="idNum row">
+                <view class="tag">身份证号码</view>
+                <view class="info" wx:if="{{msg.businessmanDto.idNumber}}">{{idNumber.toHide(msg.businessmanDto.idNumber)}}</view>
+            </view>
+            <view class="certificate row">
+                <view class="tag">营业执照</view>
+                <view class="info">
+                    <image class="certification" src="{{photoUrl}}"></image>
+                </view>
+            </view>
+            <!-- <view class="certificate row">
+                <view class="tag">营业执照</view>
+                <view class="info">{{msg.businessLicenceFileId}}</view>
+            </view> -->
+        </view>
+        
+    </view>
+</view>

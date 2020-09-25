@@ -1,0 +1,27 @@
+<!--components/collect/index/index.wxml-->
+<view 
+    class="sample-item" 
+    wx:for="{{list}}" 
+    wx:key="index" 
+    bindtap="editSample" 
+    data-index="{{index}}"
+    data-marketid="{{item.boothInfoDto.marketId}}"
+    id="{{item.id}}">
+    <view class="item-title">
+        <view class="title">{{item.businessProductDto.productName}}</view>
+        <view class="time">{{item.sampleDate}}</view>
+    </view>
+    <view class="item-info">
+        市场名称：{{item.boothInfoDto.marketName}}
+    </view>
+    <view class="item-info">
+        档口名称：{{item.boothInfoDto.boothName}}
+    </view>
+    <view class="item-info">
+        经营者姓名：{{item.businessmanDto.businessmanManager}}
+    </view>
+    <view class="item-info item-category">
+        <view >商品类型：{{item.businessProductDto.primaryTypeId}}</view>
+        <view class="btn" data-index="{{index}}" catchtap="scanRelate">扫码关联</view>
+    </view>
+</view>

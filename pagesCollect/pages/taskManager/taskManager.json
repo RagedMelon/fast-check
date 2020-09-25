@@ -1,0 +1,10 @@
+{
+    "usingComponents": {
+        "filter": "../../../components/collect/filter/filter",
+        "task-box": "../../../components/collect/task-box/index",
+        "empty": "../../../components/collect/empty/index",
+        "status-bar": "../../../components/collect/status-bar/index"
+
+    },
+    "navigationBarTitleText": "任务管理"
+}

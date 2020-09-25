@@ -1,0 +1,55 @@
+/* components/collect/index/index.wxss */
+
+.task {
+    width: 622rpx;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 24rpx;
+    padding: 32rpx;
+}
+
+.task-title {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2rpx solid rgba(250, 250, 250, 1);
+    padding-bottom: 16rpx;
+    margin-bottom: 16rpx;
+}
+
+.tag {
+    color: rgba(128, 128, 128, 1);
+    font-size: 28rpx;
+    font-family: Alibaba-PuHuiTi-R;
+}
+
+.title {
+    color: rgba(204, 204, 204, 1);
+    font-size: 28rpx;
+    font-family: Alibaba-PuHuiTi-R;
+    position: relative;
+}
+
+.title .pic {
+    width: 18rpx;
+    height: 12rpx;
+    margin-left: 18rpx;
+}
+
+.title-option {
+    position: absolute;
+    width: 200rpx;
+    top: 50rpx;
+    /* top: 0rpx; */
+    right: 0;
+    background-color: #fff;
+    text-align: center;
+    border: 2rpx solid #f2f3f5;
+    border-radius: 24rpx;
+    z-index: 2;
+}
+
+.shop-num {
+    display: flex;
+    justify-content: space-between;
+}

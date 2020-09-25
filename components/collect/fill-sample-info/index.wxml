@@ -1,0 +1,40 @@
+<!--components/collect/index/index.wxml-->
+<view class="sample-info">
+    <view class="row">
+        <view class="tag">样品码</view>
+        <view  class="fill">1231231</view>
+    </view>
+    <view class="row">
+        <view class="tag">样品名称</view>
+        <view  class="fill"><input class="input" placeholder="请输入样品名称" placeholder-class="holder"/></view>
+    </view>
+    
+    <view class="row">
+        <view class="tag">进货日期</view>
+        <picker mode="date" value="{{date}}" bindchange="bindDateChange">
+            <view class="{{change?'fill':'holder'}}">
+                {{date}}<image class="drop" src="../../../images/icon_dropdown@2x.png"></image>
+            </view>
+        </picker>
+    </view>
+    <view class="row">
+        <view class="tag">样品产地</view>
+        <view class="fill"><input class="input" placeholder="请输入样品产地" placeholder-class="holder"/></view>
+    </view>
+    <view class="row">
+        <view class="tag">供应商名称</view>
+        <view  class="fill"><input class="input" placeholder="请输入供应商名称" placeholder-class="holder"/></view>
+    </view>
+    <view class="row">
+        <view class="tag">采样时间</view>
+        <picker mode="date" value="{{date2}}" bindchange="bindDateChange2">
+            <view class="{{change2?'fill':'holder'}}">
+                {{date2}}<image class="drop" src="../../../images/icon_dropdown@2x.png"></image>
+            </view>
+        </picker>
+    </view>
+    <view class="row">
+        <view class="tag">证明材料</view>
+        <view>只支持jpg、png格式<image bindtap="upload" class="icon-add" src="../../../images/collect/icon_add_yellow@2x.png"></image></view>
+    </view>
+</view>

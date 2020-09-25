@@ -1,0 +1,37 @@
+/* pagesCollect/pages/scanSample/scanSample.wxss */
+
+page {
+    background-color: #f2f3f5;
+}
+
+
+/* .btns {
+    height: 80rpx;
+    display: flex;
+    width: 686rpx;
+    justify-content: space-between;
+    margin: 32rpx auto 80rpx;
+    font-size: 28rpx;
+}
+
+.draft {
+    width: 326rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    border-radius: 40rpx;
+    background-color: rgba(255, 255, 255, 1);
+    border: 2rpx solid rgba(242, 242, 242, 1);
+    color: rgba(255, 197, 26, 1);
+    text-align: center;
+}
+
+.submit {
+    width: 326rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    border-radius: 40rpx;
+    background-color: rgba(255, 197, 26, 1);
+    box-shadow: 0 20rpx 20rpx 0 rgba(255, 197, 26, 0.2);
+    color: white;
+    text-align: center;
+} */

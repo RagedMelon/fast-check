@@ -1,0 +1,27 @@
+<!--components/inspection/index/index.wxml-->
+<view class="report-info">
+    <view class="row" >
+        <view class="tag">检验时间</view>
+        <view >{{msg.inspects[0].inspectDate}}</view>
+    </view>
+    <view class="row">
+        <view class="tag">检验人</view>
+        <view >{{msg.inspects[0].inspectUserName}}</view>
+    </view>
+    <view class="row">
+        <view class="tag">样品名称</view>
+        <view >{{msg.productName}}</view>
+    </view>
+    <view class="row">
+        <view class="tag">所属市场</view>
+        <view >{{msg.marketName}}</view>
+    </view>
+    <view class="row">
+        <view class="tag">所属档口</view>
+        <view >{{msg.boothId}}</view>
+    </view>
+    <view class="row">
+        <view class="tag">经营者名称</view>
+        <view >{{msg.businessMan}}</view>
+    </view>
+</view>

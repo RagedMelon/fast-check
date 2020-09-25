@@ -1,0 +1,39 @@
+<!--components/collect/index/index.wxml-->
+<view class="sample-item" wx:for="{{list}}" wx:key="index">
+    <view class="item-title">
+        <view class="title">{{item.productName}}</view>
+        <view class="time">{{item.sampleDate}}</view>
+    </view>
+    <view class="item-info">
+        所属市场：{{item.marketName}}
+    </view>
+    <view class="item-info">
+        档口号：
+    </view>
+    <view class="item-info">
+        采样人：{{item.sampleUserName}}
+    </view>
+    <!-- 未处理 -->
+    <view class="item-info last" wx:if="{{!item.isHandle}}">
+        <view>
+            检验项目：
+                <text> {{item.inspects[0].checkItemName}}</text>
+                <text wx:if="{{item.checkItems.length>1}}">...</text>
+        </view>
+        <view class="btn-red" data-info="{{item}}" catchtap="handle">处理</view>
+    </view>
+    <!-- 已处理 -->
+    <view class="item-info last" wx:if="{{item.isHandle}}">
+        <view>
+            检验项目：
+                <text> {{item.inspects[0].checkItemName}}</text>
+                <text wx:if="{{item.checkItems.length>1}}">...</text>
+        </view>
+        <view 
+            class="btn-yellow" 
+            catchtap="handledRecord" 
+            data-sampleid="{{item.sampleId}}"
+            data-code="{{item.sampleCode}}">处理记录</view>
+    </view>
+    
+</view>

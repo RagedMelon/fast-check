@@ -1,0 +1,26 @@
+/* components/collect/index/index.wxss */
+
+.menu {
+    border-radius: 24rpx;
+    background-color: #fff;
+    padding: 34rpx 32rpx;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu-option {
+    text-align: center;
+}
+
+.option-pic {
+    width: 64rpx;
+    height: 64rpx;
+    display: block;
+    margin: 0 auto 18rpx;
+}
+
+.option-text {
+    color: rgba(51, 51, 51, 1);
+    font-size: 28rpx;
+    font-family: Alibaba-PuHuiTi-R;
+}

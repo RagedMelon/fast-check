@@ -1,0 +1,76 @@
+/* components/collect/index/index.wxss */
+
+.sample-info {
+    width: 622rpx;
+    padding: 16rpx 32rpx;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 24rpx;
+}
+
+.sample-info .row {
+    height: 72rpx;
+    line-height: 72rpx;
+    color: #808080;
+    display: flex;
+    justify-content: space-between;
+    font-size: 28rpx;
+    border-bottom: 2rpx solid #FAFAFA
+}
+
+.row .tag {
+    height: 100%;
+    line-height: 72rpx;
+}
+
+.icon-code {
+    width: 28rpx;
+    height: 28rpx;
+    vertical-align: middle;
+    margin-left: 18rpx;
+}
+
+.icon-add {
+    width: 32rpx;
+    height: 32rpx;
+    vertical-align: middle;
+    margin-left: 18rpx;
+}
+
+.fill {
+    color: black;
+}
+
+.drop {
+    width: 18rpx;
+    height: 12rpx;
+    margin-left: 18rpx;
+}
+
+.more-sample {
+    text-align: center;
+    font-size: 28rpx;
+    height: 394rpx;
+    padding-top: 32rpx;
+    color: #62D664;
+}
+
+.icon-add-green {
+    width: 32rpx;
+    height: 32rpx;
+    vertical-align: middle;
+    margin-right: 18rpx;
+}
+
+.input {
+    text-align: right;
+    height: 72rpx;
+    line-height: 72rpx;
+}
+
+.holder {
+    color: rgba(204, 204, 204, 1);
+    font-size: 28rpx;
+    text-align: right;
+    font-family: Alibaba-PuHuiTi-R;
+}

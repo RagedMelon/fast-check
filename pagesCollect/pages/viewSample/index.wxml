@@ -1,0 +1,11 @@
+<!--pagesCollect/pages/scanSample/scanSample.wxml-->
+<title-bar title="{{text}}" pic="{{url}}"/>
+<task-related-finished change="{{boothInfo}}"/>
+<!-- <fill-keeper/> -->
+<keeper-finished booth="{{boothInfo}}" pic="{{picUrl}}"/>
+<title-bar title="{{text2}}" pic="{{url2}}"/>
+<sample-info-finished info="{{boothInfo}}" pic="{{proofUrl}}"/>
+<!-- <view class="btns">
+    <view class="draft">草稿</view>
+    <view class="submit">提交</view>
+</view> -->

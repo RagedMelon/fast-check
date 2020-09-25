@@ -1,0 +1,112 @@
+<!--pagesInspection/pages/readIn/readIn.wxml-->
+<keeper getData="{{sampleData}}"/>
+<sample-info getData="{{sampleData}}" getPicUrls="{{proofPic}}"/>
+<title-bar title="{{text}}" pic="{{url}}"/>
+<view class="test-result" wx:for="{{info.details}}" wx:key="index" wx:for-index="infoIndex">
+    <view class="row">
+        <view class="tag">检测项目</view>
+        <view id="show-{{infoIndex}}" bindtap="showList">{{checkItemsDefault[infoIndex]}}<image class="icon" src="../../../images/icon_dropdown@2x.png"></image></view>
+        <view class="list" wx:if="{{showCheckList[infoIndex]}}">
+            <view 
+                class="item" 
+                wx:for="{{checkItems}}" 
+                wx:key="index"
+                data-info="{{item}}"
+                id="item-{{infoIndex}}"
+                catchtap="getItem">{{item.itemName}}</view>
+        </view>
+    </view>
+    <view class="row" wx:if="{{testConditions[infoIndex].hasParam==true}}">
+        <view class="tag">检测值</view>
+        <view class="test-value">
+            <input 
+                class="value" 
+                placeholder="请输入检测值" 
+                value="{{testVal[infoIndex]}}" 
+                id="testVal-{{infoIndex}}"
+                bindconfirm="getTestVal"
+                bindblur="getTestVal"
+                placeholder-class="holder"/><view >{{testConditions[infoIndex].paramUnit}}</view>
+        </view>
+    </view>
+    <view class="row">
+        <view class="tag">试剂</view>
+        <view id="show-{{infoIndex}}" bindtap="showReagentList">{{reagentDefault[infoIndex]}}<image class="icon" src="../../../images/icon_dropdown@2x.png"></image></view>
+        <view class="list" wx:if="{{showReagent[infoIndex]}}">
+            <view 
+                class="item" 
+                wx:for="{{reagentList[infoIndex]}}" 
+                wx:key="index"
+                data-info="{{item}}"
+                id="reagent-{{infoIndex}}"
+                catchtap="getReagent">{{item.reagentName}}</view>
+        </view>
+    </view>
+    <view class="row">
+        <view class="tag">试剂厂家</view>
+        <!-- <view>{{factoryDefault}}<image class="icon" src="../../../images/icon_dropdown@2x.png"></image></view> -->
+        <view>{{factoryDefault[infoIndex]}}</view>
+    </view>
+    <view class="row">
+        <view class="tag">检验结果</view>
+        <view class="{{resultDefault[infoIndex]=='阴性'?'negative':'positive'}}" id="show-{{infoIndex}}" bindtap="showResult">{{resultDefault[infoIndex]}}<image class="icon" src="../../../images/icon_dropdown@2x.png"></image></view>
+        <view class="list" wx:if="{{showResult[infoIndex]}}">
+            <view 
+                class="item" 
+                wx:for="{{resultList}}" 
+                wx:key="index"
+                data-info="{{item}}"
+                id="result-{{infoIndex}}"
+                catchtap="getResult">{{item}}</view>
+        </view>
+    </view>
+    <view class="row photos">
+        <view class="tag">拍照留证</view>
+        <view class="pics-box">
+            <text class="holder" wx:if="{{pics[infoIndex].length==0}}">不超过3张，支持jpg/png格式</text>
+            <image 
+                    class="proof" 
+                    wx:for="{{pics[infoIndex]}}" 
+                    wx:for-item="proof"
+                    wx:for-index="num"
+                    wx:key="index"
+                    src="{{proof}}"></image>
+            <image 
+                class="icon-cam" 
+                catchtap="upload" 
+                id="pics-{{infoIndex}}"
+                src="../../../images/test/icon_camera_yellow@2x.png"></image></view>
+    </view>
+    <view class="row description">
+        <view class="tag">检验说明</view>
+        <view ><textarea 
+                    class="explain" 
+                    auto-height maxlength='500' 
+                    placeholder="请输入检验说明" 
+                    id="description-{{infoIndex}}"
+                    value="{{currentInput[infoIndex]}}"
+                    bindinput="getInput"
+                    placeholder-class="holder"></textarea></view>
+    </view>
+    <!-- <view class="add" bindtap='addItem'> <image class="icon-add" src="../../../images/icon_add_green@2x.png"></image><text>添加检验项目</text></view> -->
+</view>
+    <view class="del-sample" bindtap='removeItem'>
+            <icon class="icon-small" type="cancel" size="18"></icon>删除检验项目
+    </view>
+    <view class="add" bindtap='addItem'> <image class="icon-add" src="../../../images/icon_add_green@2x.png"></image><text>添加检验项目</text></view>
+
+<view class="btn-row">
+    <view class="submit" bindtap="submit" id="submit-{{infoIndex}}">提交</view>
+</view>
+
+<!-- 自定义modal -->
+<view class="mask" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+<view class="modalDlg" wx:if="{{showModal}}">
+<view ><image class="icon-warn" src="../../../images/icon_alarm_yellow@2x.png"></image></view>
+<view class="title">样品检验结果存在<text class="red">阳性</text></view>
+<view class="question">是否继续提交？</view>
+<view class="btn">
+    <view class="no" bindtap="deny">否</view>
+    <view class="yes" bindtap="approve">是</view>
+</view>
+</view>

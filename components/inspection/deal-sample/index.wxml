@@ -1,0 +1,36 @@
+<!--components/inspection/index/index.wxml-->
+<!--pagesCollect/pages/shopInfo/shopInfo.wxml-->
+<view >
+    <view class="sample-info">
+        <view class="title">
+        <image src="../../../images/test/icon_sampleinfo_green@2x.png" class="icon-sample"></image>
+        <text>样品信息</text>
+        </view>
+        <view class="switch" bindtap="hide">
+            <text >{{tip}}</text>
+            <image class="{{hide==false?'up':'down'}}" src="../../../images/icon_packup@2x.png"></image>
+        </view>
+    </view>
+    <view class="result" wx:if="{{!hide}}">
+        <view class="row" >
+            <view class="tag">所属市场</view>
+            <view >{{info.marketName}}</view>
+        </view>
+        <view class="row">
+            <view class="tag">档口号</view>
+            <view >{{info.boothInfoDto.boothCode}}</view>
+        </view>
+        <view class="row">
+            <view class="tag">经营者姓名</view>
+            <view >{{info.businessMan}}</view>
+        </view>
+        <view class="row">
+            <view class="tag">采样人</view>
+            <view >{{info.sampleUserName}}</view>
+        </view>
+        <view class="row last">
+            <view class="tag">采样时间</view>
+            <view >{{info.sampleDate}}</view>
+        </view>
+    </view>
+</view>

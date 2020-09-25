@@ -1,0 +1,237 @@
+/* pagesCollect/pages/index/index.wxss */
+
+page {
+    background-color: #F2F3F5
+}
+
+
+/* 清除浮动 */
+
+.clearfix {
+    overflow: auto;
+    _height: 1%;
+}
+
+.empty-box {
+    height: 600rpx;
+    overflow: hidden;
+    border-radius: 24rpx;
+}
+
+
+/* 页面样式 */
+
+
+/* .home {
+    background-color: #F2F3F5;
+} */
+
+.home {
+    padding-bottom: 100rpx;
+}
+
+.home-box {
+    width: 686rpx;
+    margin: 0 auto;
+}
+
+
+/* 通知轮播 */
+
+.notice {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    /* padding: 10rpx 25rpx; */
+    padding: 10rpx 0;
+    background: #f1f1f1;
+}
+
+.icon-notice {
+    width: 36rpx;
+    height: 36rpx;
+    vertical-align: middle;
+    /* margin-right: 16rpx; */
+}
+
+.left {
+    display: flex;
+    align-items: center;
+    width: 650rpx;
+}
+
+.voice {
+    margin-right: 5rpx;
+    margin-top: 2rpx;
+    color: #fa6016;
+}
+
+.left-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 650rpx;
+}
+
+.left-text {
+    position: absolute;
+    left: 0;
+    width: 40rpx;
+    height: 100%;
+    background: linear-gradient(to left, rgba(241, 241, 241, 0), rgba(241, 241, 241, 1));
+    z-index: 99;
+}
+
+.right-text {
+    position: absolute;
+    right: -1rpx;
+    width: 40rpx;
+    height: 100%;
+    background: linear-gradient(to left, rgba(241, 241, 241, 1), rgba(241, 241, 241, 0));
+    z-index: 99;
+}
+
+.content-box {
+    overflow: hidden;
+    width: 650rpx;
+}
+
+.content-text {
+    color: #5e5e5e;
+    white-space: nowrap;
+    font-size: 28rpx;
+}
+
+.right {
+    display: flex;
+    align-items: center;
+}
+
+.app {
+    height: 48rpx;
+}
+
+.more {
+    margin-left: 5rpx;
+    color: #aaa;
+    font-size: 32rpx;
+}
+
+
+/* 任务列表 */
+
+.task-box {
+    margin-bottom: 16rpx;
+}
+
+.task-list {
+    padding: 34rpx 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.icon-task {
+    width: 36rpx;
+    height: 36rpx;
+    vertical-align: middle;
+    margin-right: 16rpx;
+}
+
+.msg-task {
+    color: rgba(51, 51, 51, 1);
+    font-size: 28rpx;
+    font-family: Alibaba-PuHuiTi-R;
+}
+
+.more-task {
+    text-align: right;
+    color: rgba(204, 204, 204, 1);
+    font-size: 28rpx;
+    text-align: left;
+    font-family: Alibaba-PuHuiTi-R;
+}
+
+.icon-more {
+    width: 12rpx;
+    height: 12rpx;
+    margin-left: 18rpx;
+    vertical-align: middle;
+}
+
+
+/* 任务详情 */
+
+.task-box {
+    width: 622rpx;
+    height: 156rpx;
+    background-color: #fff;
+    border-radius: 24rpx;
+    padding: 32rpx 32rpx;
+    margin-bottom: 16rpx;
+}
+
+.task-row1 {
+    display: flex;
+    height: 40rpx;
+    justify-content: space-between;
+    margin-bottom: 32rpx;
+}
+
+.task-title {
+    color: rgba(51, 51, 51, 1);
+    font-size: 28rpx;
+    font-weight: bold;
+    font-family: Alibaba-PuHuiTi-M;
+    margin-right: 16rpx;
+}
+
+.task-status-red {
+    display: inline-block;
+    width: 120rpx!important;
+    height: 40rpx;
+    line-height: 40rpx;
+    border-radius: 20rpx;
+    border: 1px solid rgba(242, 242, 242, 1);
+    color: #FF4D4D;
+    font-size: 22rpx;
+    font-family: Alibaba-PuHuiTi-R;
+    padding: 0;
+    text-align: center;
+}
+
+.task-type {
+    height: 40rpx;
+    line-height: 40rpx;
+    color: rgba(204, 204, 204, 1);
+    font-size: 24rpx;
+    font-family: Alibaba-PuHuiTi-R;
+}
+
+.task-row2 {
+    display: flex;
+    justify-content: space-between;
+    color: rgba(128, 128, 128, 1);
+    font-size: 24rpx;
+    font-family: Alibaba-PuHuiTi-R;
+    margin-bottom: 16rpx;
+}
+
+.task-row3 {
+    display: flex;
+    justify-content: space-between;
+    color: rgba(128, 128, 128, 1);
+    font-size: 12px;
+    text-align: left;
+    font-family: Alibaba-PuHuiTi-R;
+}
+
+
+/* 打卡图标 */
+
+.punch-in {
+    width: 104rpx;
+    height: 80rpx;
+    position: fixed;
+    bottom: 208rpx;
+    right: 0;
+}

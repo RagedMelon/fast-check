@@ -1,0 +1,128 @@
+.head {
+    position: relative;
+}
+
+
+/* 背景图 */
+
+.loginPic {
+    height: 408rpx;
+    width: 750rpx;
+}
+
+
+/* 平台名字 */
+
+.platformName {
+    text-align: center;
+    height: 66rpx;
+    color: rgba(18, 179, 18, 1);
+    font-size: 48rpx;
+    font-family: Alibaba-PuHuiTi-M;
+    position: absolute;
+    left: 138rpx;
+    top: 88rpx;
+}
+
+
+/* 登录盒子 */
+
+.login-box {
+    position: absolute;
+    bottom: -234rpx;
+    left: 32rpx;
+    width: 558rpx!important;
+    height: 306rpx;
+    padding: 34rpx 64rpx 64rpx 64rpx;
+    /* margin: 0 auto; */
+    border-radius: 24rpx;
+    z-index: 99;
+    background-color: white;
+    box-shadow: 0 20rpx 20rpx 0 rgba(204, 204, 204, 0.2);
+}
+
+.row {
+    height: 50rpx;
+    display: flex;
+    padding: 32rpx 0;
+}
+
+.icon {
+    width: 30rpx;
+    height: 36rpx;
+    margin-right: 32rpx
+}
+
+.input {
+    padding-bottom: 32rpx;
+    border-bottom: 2rpx solid #FAFAFA;
+    font-size: 32rpx;
+    font-family: Alibaba-PuHuiTi-R;
+}
+
+.grey {
+    color: rgba(204, 204, 204, 1);
+}
+
+#btn {
+    width: 622rpx!important;
+    height: 80rpx;
+    vertical-align: middle;
+    border-radius: 48rpx;
+    background-color: rgba(87, 217, 87, 1);
+    box-shadow: 0 40rpx 60rpx 0 rgba(87, 217, 87, 0.2);
+    color: rgba(255, 255, 255, 1);
+    font-size: 32rpx;
+    font-family: Alibaba-PuHuiTi-M;
+    position: absolute;
+    bottom: -40rpx;
+    left: 32rpx
+}
+
+.select-box {
+    position: absolute;
+    width: 100%;
+    top: 88rpx;
+    right: 0;
+    background-color: #fff;
+    text-align: center;
+    border: 2rpx solid #f2f3f5;
+    border-radius: 24rpx;
+    z-index: 5;
+}
+
+.second {
+    color: rgba(128, 128, 128, 1);
+    font-size: 28rpx;
+    height: 88rpx;
+    line-height: 88rpx;
+    text-align: left;
+    font-family: Alibaba-PuHuiTi-R;
+    position: relative;
+}
+
+.second-selected {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.second-selected .text {
+    color: rgba(204, 204, 204, 1);
+    display: inline-block;
+    /* width: 140rpx; */
+}
+
+.second-selected .pic {
+    width: 18rpx;
+    height: 12rpx;
+    margin-top: 32rpx;
+    /* vertical-align: middle; */
+}
+
+.second-selected .icon {
+    width: 30rpx;
+    height: 36rpx;
+    margin-right: 32rpx;
+    vertical-align: middle;
+}

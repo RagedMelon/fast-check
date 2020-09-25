@@ -1,0 +1,26 @@
+<!--components/inspection/index/index.wxml-->
+<view class="result" wx:for="{{msg.inspects}}" wx:key="index">
+    <view class="row" >
+        <view class="tag">检测项目</view>
+        <view >{{item.checkItemName}}</view>
+    </view>
+    <view class="row">
+        <view class="tag">试剂</view>
+        <view >{{item.reagentName}}</view>
+    </view>
+    <view class="row">
+        <view class="tag">试剂批次</view>
+        <view >{{item.reagentBatch}}</view>
+    </view>
+    <view class="row">
+        <view class="tag">试剂厂家</view>
+        <view >{{item.factoryName}}</view>
+    </view>
+    <view class="row">
+        <view class="tag">检测结果</view>
+        <view >
+            <view wx:if="{{item.inspectResult=='NEGATIVE'}}" class="negative">阴性 合格</view>
+            <view wx:if="{{item.inspectResult!='NEGATIVE'}}" class="positive">阳性 不合格</view>
+        </view>
+    </view>
+</view>

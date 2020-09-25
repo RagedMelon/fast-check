@@ -1,0 +1,11 @@
+<!--components/collect/index/index.wxml-->
+<view class="page-section page-section-spacing swiper">
+      <swiper class="swiper-box" indicator-dots="{{indicatorDots}}"
+        autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+        <block wx:for="{{carousel}}" wx:key="index">
+          <swiper-item class="swiper-item-box">
+            <view class="swiper-item"><image class="pic" src="{{item.url}}"></image></view>
+          </swiper-item>
+        </block>
+      </swiper>
+</view>

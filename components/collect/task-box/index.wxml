@@ -1,0 +1,64 @@
+<!-- 截取日期，去掉时间 -->
+<wxs module="date">
+var sub = function (val, start, end) {
+  
+  if ( val == undefined|| val==''|| val==null) {
+    return;
+  }
+  if (val.length > end) {
+  return val.substring(start, end);
+  } else {
+    return val;
+  }
+}
+module.exports.sub = sub;
+</wxs>
+<!-- 截取任务名字前8个 -->
+<wxs module="title">
+var toHide = function(array) {
+  if(array.length>8){
+    var newCode = array.substring(0, 8) + '...' ;
+  }
+  else{
+    var newCode = array
+  }
+  return newCode;
+}
+module.exports.toHide = toHide;
+</wxs>
+
+<!--components/collect/index/index.wxml-->
+<!-- <view class="task-box" bindtap="{{item.labelStatus==1?'taskDetails':'taskDetails2'}}" wx:for="{{List}}" wx:key="index" id="{{item.id}}"> -->
+<view class="task-box" bindtap="taskDetails2" wx:for="{{List}}" wx:key="index" id="{{item.id}}">
+  <!-- <view bindtap="taskDetails()"></view> -->
+      <view class="task-row1">
+        <view>
+          <view class="task-status">
+            <view class="task-title" wx:if="{{item.missionName}}">{{title.toHide(item.missionName)}}</view>
+            <!-- 任务状态 -->
+            <view class="task-status-red" wx:if="{{item.labelStatus==1}}">已超期</view>
+            <view class="task-status-orange" wx:if="{{item.labelStatus==2}}">即将超期</view>
+            <!-- <view class="task-status-red" wx:if="{{item.labelStatus==1}}">即将超期</view> -->
+          </view>
+        </view>
+        <!-- <view><text class="task-type">{{item.missionCode}}</text></view> -->
+        <view><text class="task-type"></text></view>
+      </view>
+      <view class="task-row2">
+        <view class="marketName">{{item.marketInfoDto.marketName}}</view>
+        <!-- <view class="date">{{item.expirationTime}}</view> -->
+        <view class="date">{{date.sub(item.expirationTime,0,10)}}</view>
+      </view>
+      <!-- 已过期和即将过期 -->
+      <view class="task-row3" wx:if="{{item.labelStatus!=0}}">
+        <view class="types}" wx:for="{{item.checkTypeDtoList}}" wx:key="index">
+          {{item.businessProductTypeDto.productType}}:<text class="done">{{item.checkTimes}}</text>
+        </view>
+      </view>
+      <!-- 进行中 -->
+      <view class="task-row3" wx:if="{{item.labelStatus==0}}">
+        <view class="types" wx:for="{{item.checkTypeDtoList}}" wx:key="index" wx:for-item="type">
+          {{type.businessProductTypeDto.productType}}:<text class="done-2">{{type.hasCheckTimes}}</text>/{{type.checkTimes}}
+        </view>
+      </view>
+    </view>

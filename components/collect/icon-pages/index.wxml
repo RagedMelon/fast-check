@@ -1,0 +1,7 @@
+<!--components/collect/index/index.wxml-->
+<view class="menu">
+      <view class="menu-option" wx:for="{{menu}}" wx:key="index" bindtap="jumpTo" id="{{item.id}}">
+        <image class="option-pic" src="{{item.icon}}"></image>
+        <text class="option-text">{{item.text}}</text>
+      </view>
+    </view>

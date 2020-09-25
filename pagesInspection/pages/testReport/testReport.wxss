@@ -1,0 +1,19 @@
+/* pagesInspection/pages/testReport/testReport.wxss */
+
+page {
+    background-color: #f2f3f5;
+}
+
+.header {
+    height: 162rpx;
+    background-color: #57D957;
+}
+
+.bottom-text {
+    margin-top: 32rpx;
+    margin-bottom: 32rpx;
+    text-align: center;
+    color: rgba(204, 204, 204, 1);
+    font-size: 28rpx;
+    font-family: Alibaba-PuHuiTi-R;
+}

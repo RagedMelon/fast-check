@@ -1,0 +1,41 @@
+/* pagesInspection/pages/accountManager/accountManager.wxss */
+
+page {
+    background-color: #f2f3f5;
+}
+
+.search-box {
+    background-color: #fff;
+    padding: 32rpx 0;
+}
+
+.search-container {
+    width: 654rpx;
+    margin: 0 auto;
+    height: 56rpx;
+    line-height: 56rpx;
+    border-radius: 28rpx;
+    background-color: rgba(255, 255, 255, 1);
+    border: 1px solid rgba(241, 241, 241, 1);
+    position: relative;
+    color: rgba(204, 204, 204, 1);
+    font-size: 28rpx;
+    text-align: left;
+    font-family: Alibaba-PuHuiTi-R;
+    padding-left: 32rpx;
+}
+
+.search-container .icon-search {
+    width: 30rpx;
+    height: 30rpx;
+    position: absolute;
+    right: 34rpx;
+    top: 14rpx;
+    z-index: 5;
+}
+
+.search-container .search-input {
+    width: 80%;
+    height: 100%;
+    color: black;
+}

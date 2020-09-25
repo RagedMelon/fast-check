@@ -1,0 +1,7 @@
+{
+    "usingComponents": {
+        "shop-list": "../../../components/collect/shopList/index",
+        "empty": "../../../components/collect/empty/index"
+
+    }
+}

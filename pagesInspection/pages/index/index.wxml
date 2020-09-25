@@ -1,0 +1,21 @@
+<!--pagesInspection/pages/index.wxml-->
+<view class="home">
+  <view class="home-box">
+    <!-- 轮播图 -->
+    <carousel/>
+    <!-- 3个管理图标 -->
+    <icon-pages icons="{{menu}}"/>
+    <!-- 待检验列表 -->
+    <homepage-bar/>
+    <sample samples="{{sampleList}}"/>
+    <view class="empty-box" wx:if="{{sampleList.length==0}}">
+      <empty text="{{noSample}}"/>
+    </view>
+    <!-- <to-be-tested/> -->
+  </view>
+  
+  
+  
+</view>
+<tabbar tabbarData="{{tabbar}}" active="{{0}}" bgcolor="{{bgcolor}}" color="{{color}}" selectedColor="{{selectedColor}}" showborder="{{showborder}}"  bind:tapChange="tabbarChange" />
+

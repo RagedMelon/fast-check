@@ -1,0 +1,11 @@
+/* pagesCollect/pages/shopList/shopList.wxss */
+
+page {
+    background-color: #f2f3f5;
+}
+
+.list-box {
+    width: 686rpx;
+    margin: 0 auto;
+    margin-top: 32rpx;
+}

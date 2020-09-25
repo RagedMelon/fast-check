@@ -1,0 +1,55 @@
+<!--pagesCollect/pages/shopInfo/shopInfo.wxml-->
+<wxs module="code">
+var toHide = function(array) {
+  var newCode = array.substring(0, 1) + '*****' + array.substring(array.length-3);
+  return newCode;
+}
+module.exports.toHide = toHide;
+</wxs>
+<view >
+    <view class="owner-info">
+        <view class="title">
+        <image src="../../../images/test/icon_sample_yellow@2x.png" class="icon-owner"></image>
+        <text>样品采样信息</text>
+        </view>
+        <view class="switch" bindtap="hide">
+            <text >{{tip}}</text>
+            <image class="{{hide==false?'up':'down'}}" src="../../../images/icon_packup@2x.png"></image>
+        </view>
+    </view>
+    <view class="box" wx:if="{{!hide}}">
+        <view class="belong row">
+            <view class="tag">样品码</view>
+            <view class="info" wx:if="{{sampleInfo.sampleCode}}">{{code.toHide(sampleInfo.sampleCode)}}</view>
+        </view>
+        <view class="name row">
+            <view class="tag">样品名称</view>
+            <view class="info">{{sampleInfo.businessProductDto.productName}}</view>
+        </view>
+        <view class="info-flex" >
+            <view class="num row">
+                <view class="tag">进货时间</view>
+                <view class="info">{{sampleInfo.inDate}}</view>
+            </view>
+            <view class="owner row">
+                <view class="tag">样品产地</view>
+                <view class="info">{{sampleInfo.place}}</view>
+            </view>
+            <view class="phone row">
+                <view class="tag">供货商名称</view>
+                <view class="info">{{sampleInfo.supplier}}</view>
+            </view>
+            <view class="idNum row">
+                <view class="tag">联系电话</view>
+                <view class="info">{{sampleInfo.businessmanDto.phone}}</view>
+            </view>
+            <view class="certificate row">
+                <view class="tag">证明材料</view>
+                <view class="info">
+                    <image wx:for="{{picsUrl}}" wx:key="index" class="pic" src="{{item}}"></image>
+                </view>
+            </view>
+        </view>
+        
+    </view>
+</view>

@@ -1,0 +1,41 @@
+<!--pagesCollect/pages/punchIn/punchIn.wxml-->
+<view class="static" bindtap="clockinStat">统计</view>
+<!-- <view bindtap="{{within?'showDialogBtn':''}}" class="{{within?'punch-btn-green':'punch-btn-grey'}}"> -->
+<view bindtap="showDialogBtn" class="{{within?'punch-btn-green':'punch-btn-grey'}}">
+        <view class="punch-text">打卡</view>
+        <view class="punch-time">{{clockNow}}</view>
+</view>
+<view class="market-name" wx:if="{{within==true}}">
+    <image wx:if="{{marketList.length==1}}" src="../../../images/collect/icon_clockin_yes@2x.png"></image>
+    <text wx:if="{{marketList.length==1}}">{{marketList[0].marketName}}</text>
+    <!-- 两个市场的情况 -->
+    <view class="page__bd" wx:if="{{marketList.length>1}}">
+        <view class="section section_gap">
+            <radio-group class="radio-group" bindchange="radioChange">
+                <radio 
+                    class="radio" 
+                    wx:for-items="{{marketList}}" 
+                    wx:key="name" 
+                    value="{{item.id}}" 
+                    checked="{{item.checked}}">
+                    <text>{{item.marketName}}</text>
+                </radio>
+            </radio-group>
+        </view>
+    </view>
+</view>
+<view class="market-name market-name-no" wx:if="{{within==false}}">
+    <view><image src="../../../images/collect/icon_clockin_no@2x.png"></image>{{marketList[0].marketName}}</view>
+    <view>当前位置超出打卡范围，请在规定区域内打卡</view>
+</view>
+<!--弹窗-->
+<view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+<view class="modal-dialog" wx:if="{{showModal}}">
+<!-- <view class="modal-dialog"> -->
+    <view class="modal-icon"><image src="../../../images/collect/icon_clockin_successed@2x.png"></image></view>
+    <view class="modal-content">
+        <view class="tips-success">打卡成功</view>
+        <view class="tips-time">打卡时间：{{time}}</view>
+    </view>
+    <view class="btn-confirm" bindtap="onConfirm" data-status="confirm">确定</view>
+</view>

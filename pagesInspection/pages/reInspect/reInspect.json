@@ -1,0 +1,8 @@
+{
+    "usingComponents": {
+        "keeper": "../../../components/inspection/keeper/index",
+        "title-bar": "../../../components/inspection/title-bar/index",
+        "sample-info": "../../../components/inspection/sample-info/index",
+        "reinspectInfo": "../../../components/inspection/reinspectInfo/index"
+    }
+}

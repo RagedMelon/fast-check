@@ -1,0 +1,17 @@
+<!--pagesInspection/pages/accountManager/accountManager.wxml-->
+<!-- 台账管理 -->
+<!-- 搜索框 -->
+<view class="search-box">
+        <view class="search-container">
+                <input placeholder="输入检验样品名称、所属市场、采样人" class="search-input" bindconfirm="bindConfirmSearch" bindfocus="bindSearchInput" value="{{searchValue}}" bindinput="bindSearchInput" placeholder-class="search_placeholder"/>
+                <image class="icon-search" src="{{'../../../images/common/icon_search@2x.png'}}" catchtap="onClickSearch"/>
+        </view>  
+</view>
+
+<status-bar bind:stage="switch" change="{{result}}"/>
+<!-- 合格样品列表 -->
+<time-filter bind:range="changeRange" bind:start="customStart" bind:end="customEnd" wx:if="{{option==0}}"/>
+<sample-passed samples="{{accountList}}" wx:if="{{option==0}}"/>
+<!-- 不合格样品列表 -->
+<filter wx:if="{{option!=0}}" second="{{statusTag}}" items="{{status}}" default="{{statusDefault}}" bind:range="failChangeRange" bind:status="failChangeStatus" bind:start="failCustomStart" bind:end="failCustomEnd"/>
+<sample-failed samples="{{accountList}}" wx:if="{{option==1}}"/>

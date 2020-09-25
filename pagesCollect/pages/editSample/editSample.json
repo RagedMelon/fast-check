@@ -1,0 +1,8 @@
+{
+    "usingComponents": {
+        "title-bar": "../../../components/collect/title-bar/index",
+        "task-related": "../../../components/collect/task-related/index",
+        "fill-keeper": "../../../components/collect/fill-keeper/index",
+        "fill-sample-info": "../../../components/collect/fill-sample-info/index"
+    }
+}

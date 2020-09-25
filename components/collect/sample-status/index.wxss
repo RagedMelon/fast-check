@@ -1,0 +1,47 @@
+/* components/collect/index/index.wxss */
+
+.sample-status {
+    margin: 0 auto;
+    padding: 0 32rpx;
+    width: 622rpx;
+    height: 104rpx;
+    line-height: 104rpx;
+    border-radius: 24rpx;
+    background-color: rgba(255, 255, 255, 1);
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.tag {
+    color: rgba(128, 128, 128, 1);
+    font-size: 28rpx;
+    text-align: left;
+    font-family: Alibaba-PuHuiTi-R;
+}
+
+.status .pic {
+    width: 18rpx;
+    height: 12rpx;
+    margin-left: 18rpx;
+    vertical-align: middle;
+}
+
+.status .text {
+    color: rgba(51, 51, 51, 1);
+    font-size: 28rpx;
+    font-family: Alibaba-PuHuiTi-R;
+}
+
+.option-box {
+    font-size: 28rpx;
+    position: absolute;
+    width: 200rpx;
+    top: 100rpx;
+    right: 0;
+    background-color: #fff;
+    text-align: center;
+    border: 2rpx solid #f2f3f5;
+    border-radius: 24rpx;
+    z-index: 2;
+}

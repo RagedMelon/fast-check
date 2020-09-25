@@ -1,0 +1,43 @@
+<!--pagesCollect/pages/taskDetails/taskDetails.wxml-->
+<view class="detail-box">
+  <view class="test-type">{{details.missionName}}</view>
+  <!-- <view class="{{item.id==10?'details-last':'details'}}" > -->
+  <view class="details" >
+    <view>任务编号</view>
+    <view class="details-data">{{details.missionCode}}</view>
+  </view>
+  <view class="details" >
+    <view>任务地点</view>
+    <view class="details-data">{{details.marketInfoDto.marketName}}</view>
+  </view>
+  <view class="details" >
+    <view>检验次数</view>
+    <view class="details-data">{{details.checkTimes}}</view>
+  </view>
+  <view class="details" wx:for="{{details.checkTypeDtoList}}" wx:key="index">
+    <view>{{item.businessProductTypeDto.productType}}</view>
+    <view class="details-data">{{item.checkTimes}}</view>
+  </view>
+  <!-- <view class="details" wx:for="{{details.missionUserSampleList}}" wx:key="index"> -->
+  <view class="details">
+    <view>采样人</view>
+    <view class="details-data">
+      <text wx:for="{{details.missionUserSampleList}}" wx:key="index">{{item.simpleUserInfoDto.fullName}}<text wx:if="{{index!=details.missionUserSampleList.length-1}}">、</text></text>
+    </view>
+  </view>
+  <view class="details">
+    <view>检验人</view>
+    <view class="details-data">
+      <text wx:for="{{details.missionUserInspectionList}}" wx:key="index">{{item.simpleUserInfoDto.fullName}}<text wx:if="{{index!=details.missionUserInspectionList.length-1}}">、</text></text>
+    </view>
+  </view>
+  <view class="details" >
+    <view>截止日期</view>
+    <view class="details-data">{{details.expirationTime}}</view>
+  </view>
+  <view class="details" >
+    <view>备注</view>
+    <view class="details-data">{{details.mark}}</view>
+  </view>
+</view>
+<button class="takeAction" bindtap="goToMarket" wx:if="{{details.isComplete==false}}">执行任务</button>

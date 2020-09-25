@@ -1,0 +1,30 @@
+<!--components/collect/index/index.wxml-->
+<view class="sample-item" wx:for="{{list}}" wx:key="index" data-info="{{item}}" bindtap="{{item.inspectStatus=='NOINSPECT'?'notScan':''}}">
+    <view class="item-title">
+        <view class="title">{{item.businessProductDto.productName}}</view>
+        <view class="time">{{item.sampleDate}}</view>
+    </view>
+    <view class="item-info">
+        所属市场：{{item.boothInfoDto.marketName}}
+    </view>
+    <view class="item-info">
+        经营者姓名：{{item.businessmanDto.businessmanManager}}
+    </view>
+    <view class="item-info">
+        采样人：{{item.sampleUser}}
+    </view>
+    <view wx:if="{{item.inspectStatus=='NOINSPECT'}}" class="item-info last">
+        <view>采样档口：{{item.boothInfoDto.boothName}}</view>
+        <!-- <view class="btn-yellow" catchtap="scan">扫码关联</view> -->
+    </view>
+
+    <view wx:if="{{item.inspectStatus!='NOINSPECT'&&(item.isQualified==true||item.isHandle==true)}}" class="item-info last">
+        <view>采样档口：{{item.boothInfoDto.boothName}}</view>
+        <view class="btn-yellow" data-info="{{item}}" catchtap="viewReport">检验报告</view>
+    </view>
+    <view wx:if="{{item.inspectStatus!='NOINSPECT'&&item.isQualified==false&&item.isHandle==false}}" class="item-info last">
+        <view>采样档口：{{item.boothInfoDto.boothName}}</view>
+        <view class="btn-red" data-info="{{item}}" catchtap="handle">处理</view>
+    </view>
+    
+</view>

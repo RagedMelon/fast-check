@@ -1,0 +1,33 @@
+<!--components/collect/index/index.wxml-->
+<view class="sample-info">
+    <view class="row">
+        <view class="tag"><text class="star-red">*</text>样品名称</view>
+        <view  class="fill"><input class="input" placeholder="请输入样品名称" /></view>
+    </view>
+    <view class="row">
+        <view class="tag"><text class="star-red">*</text>样品码</view>
+        <view  class="fill">{{code}}<image bindtap="scan" class="icon-code" src="../../../images/collect/icon_scan_yellow@2x.png"></image></view>
+    </view>
+    <view class="row">
+        <view class="tag"><text class="star-red">*</text>进货日期</view>
+        <!-- <picker mode="date" value="{{date}}" class="{{change?'fill':'holder'}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange"> -->
+        <picker mode="date" value="{{date}}" class="{{change?'fill':'holder'}}" bindchange="bindDateChange">
+            <view>
+                {{date}}<image class="drop" src="../../../images/icon_dropdown@2x.png"></image>
+            </view>
+        </picker>
+    </view>
+    <view class="row">
+        <view class="tag"><text class="star-red">*</text>样品产地</view>
+        <view  class="fill"><input class="input" placeholder="请输入样品产地" /></view>
+    </view>
+    <view class="row">
+        <view class="tag"><text class="star-red">*</text>供应商名称</view>
+        <view  class="fill"><input class="input" placeholder="请输入样品供应商名字" /></view>
+    </view>
+    <view class="row">
+        <view class="tag"><text class="star-red">*</text>证明材料</view>
+        <view >只支持jpg、png格式<image bindtap="upload" class="icon-add" src="../../../images/collect/icon_add_yellow@2x.png"></image></view>
+    </view>
+    <view class="more-sample"><image class="icon-add-green" src="../../../images/collect/icon_add_green@2x.png"></image>添加样品</view>
+</view>

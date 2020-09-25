@@ -1,0 +1,8 @@
+<!--components/inspection/index/index.wxml-->
+<view class="bar">
+    <view>
+    <image src="../../../images/collect/icon_home_tasklist@2x.png" class="icon"></image>
+    <text class="title">待检验列表</text>
+    </view>
+    <view class="more" catchtap='seeMore'>更多<image class="icon-more" src="../../../images/collect/icon_more@2x.png"/></view>
+</view>

@@ -1,0 +1,143 @@
+<!--pagesCollect/pages/randomTest/randomTest.wxml-->
+<wxs module="code">
+var toHide = function(array) {
+  var newCode = array.substring(0, 1) + '*****' + array.substring(array.length-3);
+  return newCode;
+}
+module.exports.toHide = toHide;
+</wxs>
+<!-- 关联任务标题栏 -->
+<title-bar title="{{text}}" pic="{{url}}"/>
+<!-- 关联任务选项框 -->
+<view class="task">
+    <view class="task-title">
+        <view class="tag">任务标题</view>
+        <view class="title" bindtap="showList">
+            <!-- <text class="text" style="color:{{chosenTask?'black':''}}">{{default}}</text> -->
+            <text class="fill">{{default}}</text>
+            <image class="pic" src="../../../images/icon_dropdown@2x.png"></image>
+            
+        </view>
+        <view wx:if="{{taskList.length}}" class="{{taskList.length>3?'title-option':'title-option-small'}}">
+            <scroll-view class="{{taskList.length>3?'scroll-view':'scroll-view2'}}" scroll-y="true" wx:if="{{show}}"  bindscrolltolower="ScrollLower">
+                <view 
+                    wx:for="{{taskList}}"
+                    class="option"
+                    data-index="{{index}}"
+                    data-name="{{item.missionName}}" 
+                    data-id="{{item.id}}"
+                    wx:key="index" bindtap="selected">
+                    {{item.missionName}}
+                </view>
+                <view class="option" hidden="{{!searchLoading}}">正在载入更多...</view>
+                <view class="option complete" hidden="{{!searchLoadingComplete}}">已加载完</view>
+            </scroll-view>
+        </view>
+    </view>
+    <view class="shop-num">
+        <view class="tag">任务编号</view>
+        <view class="num">{{shopNum}}</view>
+    </view>
+</view> 
+<!-- 样品采样信息标题栏 -->
+<title-bar title="{{text2}}" pic="{{url2}}"/>
+<!-- 样品采样信息表格 -->
+<view class="sample-info">
+    <!-- <view class="info-box" wx:for="{{info.details}}" wx:key="index"> -->
+    <view class="info-box" wx:for="{{info.details}}" wx:key="key">
+        <view class="row">
+            <view class="tag"><text class="star-red">*</text>样品名称</view>
+            <view  class="fill">
+                <input 
+                class="input" 
+                placeholder="请输入样品名称"
+                value="{{nameList[index]}}"
+                id="name-{{index}}"
+                bindinput="bindSampleName"/>
+            <view class="{{searchList[index].length>4?'search-box':'search-box-small'}}" wx:if="{{showSearch[index]&&searchList[index].length>0}}">
+                <!-- <view class="search-box" wx:if="{{nameList[index].length>0&&searchResult.length>0}}"> -->
+                    <view 
+                        class="result" 
+                        wx:for="{{searchList[index]}}" 
+                        wx:key="index"
+                        wx:for-index="result"
+                        wx:for-item="search"
+                        data-name="{{search.productName}}"
+                        data-index="{{result}}"
+                        data-coindex="{{index}}"
+                        catchtap="chooseProductName">
+                            {{search.productName}}
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="row">
+            <view class="tag"><text class="star-red">*</text>样品码</view>
+            <view  class="fill"><text wx:if="{{item.sampleCode}}">{{code.toHide(item.sampleCode)}}1</text><image bindtap="scan" id="code-{{index}}" class="icon-code" src="../../../images/collect/icon_scan_yellow@2x.png"></image></view>
+            <!-- <view  class="fill"><text>{{item.sampleCode}}</text><image bindtap="scan" id="code-{{index}}" class="icon-code" src="../../../images/collect/icon_scan_yellow@2x.png"></image></view> -->
+        </view>
+        <view class="row">
+            <view class="tag"><text class="star-red">*</text>进货日期</view>
+            <picker 
+                mode="date" 
+                value="{{item.inDate}}" 
+                class="fill" 
+                id="inDate-{{index}}"
+                bindchange="bindDateChange">
+                <view>
+                    {{item.inDate}}<image class="drop" src="../../../images/icon_dropdown@2x.png"></image>
+                </view>
+            </picker>
+        </view>
+        <view class="row">
+            <view class="tag"><text class="star-red">*</text>样品产地</view>
+            <view  class="fill">
+                <input 
+                    class="input" 
+                    id="place-{{index}}"
+                    value="{{item.place}}"
+                    bindinput="bindPlace"
+                    placeholder="请输入样品产地" />
+            </view>
+        </view>
+        <view class="row">
+            <view class="tag"><text class="star-red">*</text>供应商名称</view>
+            <view  class="fill">
+                <input 
+                    class="input" 
+                    id="supplier-{{index}}"
+                    value="{{item.supplier}}"
+                    bindinput="bindSupplier"
+                    placeholder="请输入样品供应商名字" />
+            </view>
+        </view>
+        <view class="row last">
+            <!-- <view class="tag"><text class="star-red">*</text>证明材料</view> -->
+            <view class="tag">证明材料</view>
+            <view class='pic-box'>
+                <text wx:if="{{pics[index]==undefined}}">只支持jpg、png格式</text>
+                <!-- <text>只支持jpg、png格式</text> -->
+                <image 
+                    class="proof" 
+                    wx:for="{{pics[index]}}" 
+                    wx:for-item="proof"
+                    wx:for-index="num"
+                    wx:key="index"
+                    src="{{proof}}"></image>
+                <image catchtap="upload" id="pic-{{index}}" class="icon-add" src="../../../images/collect/icon_add_yellow@2x.png"></image>
+            </view>
+        </view>
+        
+    </view>
+    <view class="del-sample" bindtap='removeItem' wx:if="{{info.details.length>1}}">
+            <icon class="icon-small" type="cancel" size="18"></icon>删除样品
+    </view>
+    <view class="more-sample" bindtap='addItem'><image class="icon-add-green" src="../../../images/collect/icon_add_green@2x.png"></image>添加样品</view>
+</view>
+    
+
+<!-- 底部按钮 -->
+<view class="btns">
+    <view class="draft" bindtap="draft">草稿</view>
+    <view class="submit" bindtap="submit">提交</view>
+</view>

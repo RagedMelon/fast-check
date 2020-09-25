@@ -1,0 +1,70 @@
+/* components/collect/index/index.wxss */
+
+.sample-item {
+    width: 622rpx;
+    margin: 16rpx auto 0;
+    background-color: #fff;
+    height: 274rpx;
+    border-radius: 24rpx;
+    background-color: rgba(255, 255, 255, 1);
+    padding: 32rpx;
+}
+
+.item-title {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 16rpx;
+}
+
+.title {
+    color: rgba(51, 51, 51, 1);
+    font-size: 28rpx;
+    font-family: Alibaba-PuHuiTi-M;
+}
+
+.time {
+    color: rgba(204, 204, 204, 1);
+    font-size: 24rpx;
+    text-align: right;
+    font-family: Alibaba-PuHuiTi-R;
+}
+
+.item-info {
+    color: rgba(128, 128, 128, 1);
+    font-size: 24rpx;
+    text-align: left;
+    font-family: Alibaba-PuHuiTi-R;
+    margin-top: 16rpx;
+}
+
+.item-category {
+    display: flex;
+    justify-content: space-between;
+}
+
+.last {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-yellow {
+    width: 160rpx;
+    height: 48rpx;
+    line-height: 48rpx;
+    border-radius: 24rpx;
+    background-color: rgba(255, 197, 26, 1);
+    box-shadow: 0 20rpx 20rpx 0 rgba(255, 197, 26, 0.2);
+    text-align: center;
+    color: white;
+}
+
+.btn-red {
+    width: 160rpx;
+    height: 48rpx;
+    line-height: 48rpx;
+    border-radius: 24rpx;
+    background-color: red;
+    box-shadow: 0 20rpx 20rpx 0 rgba(255, 99, 26, 0.2);
+    text-align: center;
+    color: white;
+}

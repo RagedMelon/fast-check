@@ -1,0 +1,20 @@
+/* pagesCollect/pages/shopInfo/shopInfo.wxss */
+
+page {
+    background-color: #f2f3f5;
+}
+
+
+/* 按钮 */
+
+.random {
+    width: 686rpx;
+    margin: 32rpx auto 40rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    color: white;
+    text-align: center;
+    border-radius: 40rpx;
+    background-color: rgba(255, 197, 26, 1);
+    box-shadow: 0 20rpx 20rpx 0 rgba(255, 197, 26, 0.2);
+}

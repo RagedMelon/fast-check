@@ -1,0 +1,89 @@
+/* components/collect/index/index.wxss */
+
+
+/* pagesCollect/pages/shopInfo/shopInfo.wxss */
+
+.owner-info {
+    display: flex;
+    justify-content: space-between;
+    width: 686rpx;
+    margin: 32rpx auto;
+}
+
+.icon-owner {
+    width: 36rpx;
+    height: 36rpx;
+    vertical-align: middle;
+    margin-right: 16rpx;
+}
+
+.title {
+    font-size: 28rpx;
+    font-family: Alibaba-PuHuiTi-R;
+}
+
+.switch {
+    color: rgba(204, 204, 204, 1);
+    font-size: 28rpx;
+    font-family: Alibaba-PuHuiTi-R;
+}
+
+.switch .up {
+    width: 18rpx;
+    height: 12rpx;
+    vertical-align: middle;
+    margin-left: 18rpx;
+    /* transform: rotate(180deg); */
+    transition: All 0.3s ease-in-out;
+}
+
+.switch .down {
+    width: 18rpx;
+    height: 12rpx;
+    vertical-align: middle;
+    margin-left: 18rpx;
+    transform: rotate(180deg);
+    transition: All 0.3s ease-in-out;
+}
+
+
+/* 信息盒子 */
+
+.box {
+    width: 622rpx;
+    margin: 0 auto;
+    border-radius: 24rpx;
+    padding: 16rpx 32rpx;
+    background-color: #fff;
+}
+
+.tag {
+    color: rgba(128, 128, 128, 1);
+    font-size: 28rpx;
+    font-family: Alibaba-PuHuiTi-R;
+}
+
+.info {
+    color: rgba(51, 51, 51, 1);
+    font-size: 28rpx;
+    font-family: Alibaba-PuHuiTi-R;
+}
+
+.row {
+    height: 72rpx;
+    line-height: 72rpx;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2rpx solid #FAFAFA;
+}
+
+.certificate {
+    height: 124rpx;
+    line-height: 124rpx;
+    /* line-height: 100rpx; */
+}
+
+.certificate .pic {
+    height: 100%;
+    width: 234rpx;
+}

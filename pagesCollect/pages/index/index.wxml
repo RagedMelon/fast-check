@@ -1,0 +1,45 @@
+<!--pagesCollect/pages/index.wxml-->
+<view class="home">
+  <view class="home-box">
+    <!-- 通知 -->
+    <!-- <notice-bar/> -->
+    <view class='notice' bindtap="more">
+      <image src="../../../images/collect/icon_home_notice@2x.png" class="icon-notice"></image>
+      <view class="left">
+        <text class='iconfont icon-labagonggao voice'></text>
+          <view class="left-box">
+            <view class="left-text"></view>
+            <view class='content-box'>
+              <view class='content-text' animation="{{animationData}}"><text id="text">{{text}}</text></view>
+            </view>
+            <view class="right-text"></view>
+          </view>
+      </view>
+      <!-- <view class="right" bindtap="goApp">
+        <image class="app" mode="aspectFit" src="/assets/images/app.png" style="width:{{widthrpx}}rpx" bindload="imageLoad"></image>
+        <text class="more">更多应用></text>
+      </view> -->
+    </view>
+    <!-- 轮播图 -->
+    <carousel/>
+    <!-- 跳转图标 -->
+    <icon-pages/>
+    <!-- 任务列表bar -->
+    <view class="task-list">
+      <view>
+        <image src="../../../images/collect/icon_home_tasklist@2x.png" class="icon-task"></image>
+        <text class="msg-task">任务列表</text>
+      </view>
+      <view class="more-task" bindtap="more">更多<image class="icon-more" src="../../../images/collect/icon_more@2x.png"/></view>
+    </view>
+    <!-- 任务列表盒子 -->
+    <task-box taskList="{{taskList}}"/>
+    <view class="empty-box" wx:if="{{taskList.length==0}}">
+      <empty text="{{noTask}}"/>
+    </view>
+    <!-- 未完成-有未完成任务-即将超期 -->
+  </view>
+</view>
+<image class="punch-in" src="../../../images/collect/icon_home_clockin@2x.png" bindtap="clockin"></image>
+<!-- <tabbar tabbarData="{{tabbar}}" active="{{0}}" bgcolor="{{bgcolor}}" color="{{color}}" selectedColor="{{selectedColor}}" showborder="{{showborder}}"  bind:tapChange="tabbarChange" /> -->
+<tabbar tabbarData="{{tabbar}}" bgcolor="{{bgcolor}}" color="{{color}}" selectedColor="{{selectedColor}}" showborder="{{showborder}}"  bind:tapChange="tabbarChange" />

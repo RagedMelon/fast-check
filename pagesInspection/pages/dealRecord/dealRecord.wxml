@@ -1,0 +1,32 @@
+<!--pagesInspection/pages/deal/deal.wxml-->
+<deal-sample getInfo="{{details}}"/>
+<deal-project getInfo="{{details}}"/>
+<title-bar title="{{text}}" pic="{{url}}"/>
+<!-- <deal-method/> -->
+<view class="deal-box">
+    <view class="row">
+        <view >处理数量</view>
+        <view class="black">
+            {{dealResult.handleWeight}}
+        </view>
+    </view>
+    <view class="row">
+        <view >处理方式</view>
+        <view class="black">{{dealResult.handleStatusStr}}</view>
+        
+    </view>
+    <view class="pic-row">
+        <view >相关照片</view>
+        <view class="grey pic-box">
+            <text wx:if="{{pics.length==0}}">最多十张，只支持jpg/png格式</text>
+            <image 
+                wx:for="{{pics}}"
+                wx:key="index"
+                wx:for-item="pic"
+                src="{{pic}}" 
+                class="photo"></image>
+        </view>
+    </view>
+
+</view>
+

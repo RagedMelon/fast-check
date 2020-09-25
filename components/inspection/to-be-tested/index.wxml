@@ -1,0 +1,20 @@
+<!--components/collect/index/index.wxml-->
+<view class="sample-item" wx:for="{{items}}" wx:key="index">
+    <view class="item-title">
+        <view class="title">{{item.title}}</view>
+        <view class="time">{{item.time}}</view>
+    </view>
+    <view class="item-info">
+        所属市场：{{item.market}}
+    </view>
+    <view class="item-info">
+        经营者姓名：{{item.owner}}
+    </view>
+    <view class="item-info">
+        采样人：{{item.inspector}}
+    </view>
+    <view class="item-info item-category">
+        采样档口：{{item.shop}}
+        <view class="btn" bindtap="scan">扫码关联</view>
+    </view>
+</view>

@@ -1,0 +1,177 @@
+/* pagesCollect/pages/punchIn/punchIn.wxss */
+
+page {
+    background-color: #F2F3F5;
+}
+
+.static {
+    height: 56rpx;
+    line-height: 56rpx;
+    width: 120rpx;
+    color: #FFC51A;
+    border: 2rpx solid #FFC51A;
+    font-size: 28rpx;
+    text-align: center;
+    border-radius: 30rpx;
+    position: absolute;
+    right: 20rpx;
+    top: 32rpx;
+}
+
+.punch-btn-green {
+    width: 360rpx;
+    height: 360rpx;
+    border-radius: 50%;
+    margin: 152rpx auto 32rpx;
+    position: relative;
+    text-align: center;
+    background-color: #57D957;
+    box-shadow: 0 20rpx 20rpx 0 rgba(87, 217, 87, 0.2);
+}
+
+.punch-btn-grey {
+    width: 360rpx;
+    height: 360rpx;
+    border-radius: 50%;
+    margin: 152rpx auto 32rpx;
+    position: relative;
+    text-align: center;
+    background-color: #B3B3B3;
+    box-shadow: rgba(177, 177, 177, 0.2)
+}
+
+.punch-text {
+    color: rgba(255, 255, 255, 1);
+    font-size: 48rpx;
+    font-family: Alibaba-PuHuiTi-M;
+    padding: 118rpx 0 20rpx;
+}
+
+.punch-time {
+    color: rgba(255, 255, 255, 1);
+    font-size: 28rpx;
+    font-family: Alibaba-PuHuiTi-M;
+}
+
+.market-name {
+    height: 34rpx;
+    line-height: 36rpx;
+    text-align: center;
+    color: rgba(51, 51, 51, 1);
+    font-size: 32rpx;
+    font-family: Alibaba-PuHuiTi-R;
+    display: flex;
+    justify-content: center;
+}
+
+.market-name image {
+    width: 36rpx;
+    height: 36rpx;
+    vertical-align: middle;
+    margin-right: 16rpx;
+}
+
+.market-name-no image {
+    width: 27.3rpx;
+    height: 33.76rpx;
+    /* height: 100%; */
+    vertical-align: middle;
+    margin-right: 16rpx;
+}
+
+.market-name-no view {
+    color: rgba(128, 128, 128, 1);
+    font-size: 28rpx;
+    font-family: Alibaba-PuHuiTi-R;
+    margin-top: 16rpx
+}
+
+
+/* 两个市场时 */
+
+
+/* .radio-group {
+    border-bottom: 2rpx solid #ddd;
+} */
+
+.radio {
+    display: block;
+    /* border-top: 2px solid #ddd; */
+    padding: 10rpx;
+    text-align: left;
+}
+
+
+/* 弹窗 */
+
+
+/**index.wxss**/
+
+.modal-mask {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    opacity: 0.5;
+    overflow: hidden;
+    z-index: 9000;
+    color: #fff;
+}
+
+.modal-dialog {
+    width: 540rpx;
+    height: 356rpx;
+    overflow: hidden;
+    position: fixed;
+    /* top: 50%; */
+    top: 496rpx;
+    left: 0;
+    z-index: 9999;
+    background: #f9f9f9;
+    margin: -180rpx 105rpx;
+    border-radius: 36rpx;
+    padding: 48rpx 0;
+}
+
+.modal-icon {
+    text-align: center;
+}
+
+.modal-icon image {
+    width: 92rpx;
+    height: 96rpx;
+}
+
+.modal-content {
+    padding: 48rpx 0;
+    text-align: center;
+}
+
+.tips-success {
+    color: rgba(51, 51, 51, 1);
+    font-size: 32rpx;
+    font-family: Alibaba-PuHuiTi-M;
+    margin-bottom: 8rpx;
+}
+
+.tips-time {
+    color: rgba(128, 128, 128, 1);
+    font-size: 28rpx;
+    font-family: Alibaba-PuHuiTi-R;
+}
+
+.btn-confirm {
+    width: 436rpx;
+    margin: 0 auto;
+    height: 72rpx;
+    line-height: 72rpx;
+    border-radius: 36rpx;
+    background-color: rgba(255, 197, 26, 1);
+    box-shadow: 0 20rpx 20rpx 0 rgba(255, 197, 26, 0.2);
+    color: rgba(255, 255, 255, 1);
+    font-size: 28rpx;
+    font-family: Alibaba-PuHuiTi-R;
+    text-align: center;
+}

@@ -1,0 +1,98 @@
+.filter {
+    margin: 32rpx 0;
+    /* height: 178rpx; */
+    border-radius: 24rpx;
+    background-color: rgba(255, 255, 255, 1);
+    padding: 0 32rpx;
+}
+
+.range-selected .black {
+    color: black;
+}
+
+.range {
+    color: rgba(128, 128, 128, 1);
+    font-size: 28rpx;
+    height: 88rpx;
+    line-height: 88rpx;
+    text-align: left;
+    font-family: Alibaba-PuHuiTi-R;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2rpx solid #FAFAFA;
+}
+
+.range-selected {
+    width: 200rpx;
+    text-align: center;
+}
+
+.range-selected .text {
+    color: rgba(204, 204, 204, 1);
+    display: inline-block;
+    width: 140rpx;
+}
+
+.range-selected .pic {
+    width: 18rpx;
+    height: 12rpx;
+    margin-left: 24rpx;
+    vertical-align: middle;
+}
+
+.timePicker {
+    color: rgba(128, 128, 128, 1);
+    font-size: 28rpx;
+    height: 88rpx;
+    line-height: 88rpx;
+    text-align: left;
+    font-family: Alibaba-PuHuiTi-R;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2rpx solid #FAFAFA;
+}
+
+.select-box {
+    position: absolute;
+    width: 200rpx;
+    top: 88rpx;
+    right: 0;
+    background-color: #fff;
+    text-align: center;
+    border: 2rpx solid #f2f3f5;
+    border-radius: 24rpx;
+    z-index: 2;
+}
+
+.second {
+    color: rgba(128, 128, 128, 1);
+    font-size: 28rpx;
+    height: 88rpx;
+    line-height: 88rpx;
+    text-align: left;
+    font-family: Alibaba-PuHuiTi-R;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    /* border-bottom: 2rpx solid #FAFAFA; */
+}
+
+.second-selected {
+    width: 200rpx;
+    text-align: center;
+}
+
+.second-selected .text {
+    color: rgba(204, 204, 204, 1);
+    display: inline-block;
+    width: 140rpx;
+}
+
+.second-selected .pic {
+    width: 18rpx;
+    height: 12rpx;
+    margin-left: 24rpx;
+    vertical-align: middle;
+}

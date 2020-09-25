@@ -1,0 +1,14 @@
+{
+    "usingComponents": {
+        "status-bar": "../../../components/collect/status-bar/index",
+        "sample-status": "../../../components/collect/sample-status/index",
+        "unrelated": "../../../components/collect/unrelated/index",
+        "unreported": "../../../components/collect/unreported/index",
+        "time-filter": "../../../components/collect/time-filter/index",
+        "finished": "../../../components/collect/finished/index"
+
+
+    },
+    "navigationBarTitleText": "采样管理"
+
+}

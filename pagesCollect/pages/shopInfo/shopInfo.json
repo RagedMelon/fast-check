@@ -1,0 +1,6 @@
+{
+    "usingComponents": {
+        "keeper": "../../../components/collect/keeper/index",
+        "random-record": "../../../components/collect/random-record/index"
+    }
+}

@@ -1,0 +1,40 @@
+<!--pagesCollect/pages/shopInfo/shopInfo.wxml-->
+<view >
+    <view class="owner-info">
+        <view class="title">
+        <image src="../../../images/test/icon_sample_yellow@2x.png" class="icon-owner"></image>
+        <text>{{title}}</text>
+        </view>
+        <view class="switch" bindtap="hide">
+            <text >{{tip}}</text>
+            <image class="{{hide==false?'up':'down'}}" src="../../../images/icon_packup@2x.png"></image>
+        </view>
+    </view>
+    <view class="box" wx:if="{{!hide}}">
+        <view class="result" wx:for="{{msg}}" wx:key="index">
+            <view class="row" >
+                <view class="tag">检测项目</view>
+                <view >{{item.checkItemName}}</view>
+            </view>
+            <view class="row">
+                <view class="tag">试剂</view>
+                <view >{{item.reagentName}}</view>
+            </view>
+            <view class="row">
+                <view class="tag">试剂批次</view>
+                <view >{{item.reagentBatch}}</view>
+            </view>
+            <view class="row">
+                <view class="tag">试剂厂家</view>
+                <view >{{item.factoryName}}</view>
+            </view>
+            <view class="row">
+                <view class="tag">检测结果</view>
+                <view >
+                    <view wx:if="{{item.inspectResult=='NEGATIVE'}}" class="negative">阴性 合格</view>
+                    <view wx:if="{{item.inspectResult!='NEGATIVE'}}" class="positive">阳性 不合格</view>
+                </view>
+            </view>
+        </view>       
+    </view>
+</view>

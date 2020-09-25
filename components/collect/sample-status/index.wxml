@@ -1,0 +1,11 @@
+<!--components/collect/index/index.wxml-->
+<view class="sample-status">
+    <view class="tag">{{tag}}</view>
+    <view class="status" bindtap="showList">
+        <text class="text">{{default}}</text>
+        <image class="pic" src="../../../images/icon_dropdown@2x.png"></image>
+    </view>
+    <view class="option-box" wx:if="{{show}}">
+        <view class="option" wx:for="{{groups}}" wx:key="index" id="{{item.id}}" data-name="{{item.status}}" bindtap="selected">{{item.status}}</view>
+    </view>
+</view>

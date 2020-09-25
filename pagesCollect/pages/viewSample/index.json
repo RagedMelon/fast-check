@@ -1,0 +1,8 @@
+{
+    "usingComponents": {
+        "title-bar": "../../../components/collect/title-bar/index",
+        "task-related-finished": "../../../components/collect/task-related-finished/index",
+        "keeper-finished": "../../../components/collect/keeper-finished/index",
+        "sample-info-finished": "../../../components/collect/sample-info-finished/index"
+    }
+}

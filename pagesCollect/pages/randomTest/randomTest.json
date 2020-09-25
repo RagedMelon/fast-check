@@ -1,0 +1,7 @@
+{
+    "usingComponents": {
+        "title-bar": "../../../components/collect/title-bar/index",
+        "task-related": "../../../components/collect/task-related/index",
+        "sample-info": "../../../components/collect/sample-info/index"
+    }
+}

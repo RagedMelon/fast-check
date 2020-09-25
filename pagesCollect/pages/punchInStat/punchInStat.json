@@ -1,0 +1,8 @@
+{
+    "usingComponents": {
+        "empty": "../../../components/collect/empty/index"
+
+    },
+    "navigationBarTitleText": "打卡统计"
+
+}

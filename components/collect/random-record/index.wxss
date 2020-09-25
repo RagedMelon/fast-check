@@ -1,0 +1,105 @@
+/* components/collect/index/index.wxss */
+
+.record {
+    width: 686rpx;
+    margin: 0 auto;
+}
+
+.title {
+    display: flex;
+    font-size: 28rpx;
+    font-family: Alibaba-PuHuiTi-R;
+    margin: 32rpx 0;
+}
+
+.title .pic {
+    width: 36rpx;
+    height: 36rpx;
+    margin-right: 16rpx;
+}
+
+.record-list {
+    background-color: #fff;
+    border-radius: 24rpx;
+    padding: 32rpx;
+}
+
+.item-record {
+    border-bottom: 2rpx solid rgba(250, 250, 250, 1);
+    padding-bottom: 16rpx;
+    margin-bottom: 26rpx;
+}
+
+.food {
+    display: flex;
+    justify-content: space-between;
+}
+
+.food-name {
+    color: rgba(51, 51, 51, 1);
+    font-size: 28rpx;
+    font-family: Alibaba-PuHuiTi-M;
+}
+
+.food-time {
+    color: rgba(128, 128, 128, 1);
+    font-size: 28rpx;
+    font-family: Alibaba-PuHuiTi-R;
+}
+
+.tested {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16rpx;
+}
+
+.element {
+    color: rgba(128, 128, 128, 1);
+    font-size: 28rpx;
+    font-family: Alibaba-PuHuiTi-R;
+}
+
+
+/* .result {
+    color: rgba(127, 127, 127, 1);
+    font-size: 28rpx;
+    font-family: Alibaba-PuHuiTi-R;
+} */
+
+.negative {
+    color: rgba(127, 127, 127, 1);
+    font-size: 28rpx;
+    font-family: Alibaba-PuHuiTi-R;
+}
+
+.positive {
+    color: red;
+    font-size: 28rpx;
+    font-family: Alibaba-PuHuiTi-R;
+}
+
+.more {
+    height: 106rpx;
+    line-height: 106rpx;
+    text-align: center;
+    color: rgba(204, 204, 204, 1);
+    font-size: 28rpx;
+    font-family: Alibaba-PuHuiTi-R;
+}
+
+.more .down {
+    width: 18rpx;
+    height: 12rpx;
+    margin-left: 18rpx;
+    vertical-align: middle;
+    transition: All 0.3s ease-in-out;
+}
+
+.more .up {
+    width: 18rpx;
+    height: 12rpx;
+    margin-left: 18rpx;
+    vertical-align: middle;
+    transform: rotate(180deg);
+    transition: All 0.3s ease-in-out;
+}

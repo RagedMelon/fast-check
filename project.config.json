@@ -1,0 +1,249 @@
+{
+  "description": "项目配置文件",
+  "packOptions": {
+    "ignore": []
+  },
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "enhance": false,
+    "postcss": true,
+    "preloadBackgroundData": false,
+    "minified": true,
+    "newFeature": true,
+    "coverView": true,
+    "nodeModules": false,
+    "autoAudits": false,
+    "showShadowRootInWxmlPanel": true,
+    "scopeDataCheck": false,
+    "uglifyFileName": false,
+    "checkInvalidKey": true,
+    "checkSiteMap": true,
+    "uploadWithSourceMap": true,
+    "compileHotReLoad": false,
+    "useMultiFrameRuntime": false,
+    "useApiHook": false,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    },
+    "useIsolateContext": true,
+    "useCompilerModule": true,
+    "userConfirmedUseCompilerModuleSwitch": false,
+    "packNpmManually": false,
+    "packNpmRelationList": []
+  },
+  "compileType": "miniprogram",
+  "libVersion": "2.12.1",
+  "appid": "wx5497a1b44562c31c",
+  "projectname": "%E6%99%BA%E6%85%A7%E5%BF%AB%E6%A3%80",
+  "debugOptions": {
+    "hidedInDevtools": []
+  },
+  "isGameTourist": false,
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
+  "condition": {
+    "search": {
+      "current": -1,
+      "list": []
+    },
+    "conversation": {
+      "current": -1,
+      "list": []
+    },
+    "plugin": {
+      "current": -1,
+      "list": []
+    },
+    "game": {
+      "currentL": -1,
+      "list": []
+    },
+    "gamePlugin": {
+      "current": -1,
+      "list": []
+    },
+    "miniprogram": {
+      "current": -1,
+      "list": [
+        {
+          "id": -1,
+          "name": "登录页面",
+          "pathName": "pages/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 1,
+          "name": "采集首页",
+          "pathName": "pagesCollect/pages/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 2,
+          "name": "检验首页",
+          "pathName": "pagesInspection/pages/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 3,
+          "name": "采集端打卡",
+          "pathName": "pagesCollect/pages/punchIn/punchIn",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "打卡统计",
+          "pathName": "pagesCollect/pages/punchInStat/punchInStat",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "任务管理",
+          "pathName": "pagesCollect/pages/taskManager/taskManager",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "我的",
+          "pathName": "pagesCollect/pages/myAccount/myAccount",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 7,
+          "name": "任务详情",
+          "pathName": "pagesCollect/pages/taskDetails/taskDetails",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "统计分析",
+          "pathName": "pagesCollect/pages/staticAnalysis/staticAnalysis",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "修改密码",
+          "pathName": "pagesCollect/pages/reset/reset",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "test",
+          "pathName": "pagesCollect/pages/test/test",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "市场管理",
+          "pathName": "pagesCollect/pages/marketManager/marketManager",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "档口列表",
+          "pathName": "pagesCollect/pages/shopList/shopList",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "档口详情",
+          "pathName": "pagesCollect/pages/shopInfo/shopInfo",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "编辑采样",
+          "pathName": "pagesCollect/pages/randomTest/randomTest",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "扫描样品",
+          "pathName": "pagesCollect/pages/scanSample/scanSample",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "采样管理",
+          "pathName": "pagesCollect/pages/samplingManager/samplingManager",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "录入快检结果",
+          "pathName": "pagesInspection/pages/readIn/readIn",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "检验报告",
+          "pathName": "pagesInspection/pages/testReport/testReport",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "录入端-处理",
+          "pathName": "pagesInspection/pages/deal/deal",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "样品管理",
+          "pathName": "pagesInspection/pages/sampleManager/sampleManager",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "台账管理",
+          "pathName": "pagesInspection/pages/accountManager/accountManager",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 22,
+          "name": "测试",
+          "pathName": "pagesInspection/pages/test/test",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "扫商户码",
+          "pathName": "pagesCollect/pages/scanBusinessCode/scanBusinessCode",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "采样管理点击进入编辑采样",
+          "pathName": "pagesCollect/pages/editSample/editSample",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

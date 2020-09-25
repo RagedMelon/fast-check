@@ -1,0 +1,32 @@
+<view class="filter">
+    <!-- 日期筛选 -->
+    <view class='range'>
+      <view class='range-text'>{{dateFilter}}</view>
+      <!-- 下拉框 -->
+      <view class='range-selected' bindtap='bindShowRange'>
+        <text class="text" style="color: {{rangeText > 0 ? 'black' : ''}}">{{rangeDefault}}</text>
+        <image class="pic" src='../../../images/collect/icon_dropdown@2x.png'></image>
+      </view>
+      <!-- 下拉需要显示的列表 -->
+      <view class="select-box" wx:if="{{rangeSelect}}">
+        <view wx:for="{{range}}" wx:key="index">
+          <view class="select-one" bindtap="rangeChosen" data-name="{{item.option}}" id="{{item.id}}">{{item.option}}</view>
+        </view>
+      </view>
+    </view>
+    <!-- 日期自定义 -->
+    <view class="weui-cells timePicker" hidden="{{timeBoxHidden}}" wx:if="{{rangeText==4}}">
+      <view>起止时间</view>
+    　　<view class="weui-cell">
+          <picker mode="date" value="{{dateStart}}" bindchange="bindDateStartChange">
+            <text>{{dateStart}}</text>
+          </picker>
+    　　</view>
+        <view>-</view>
+        <view class="weui-cell">
+          <picker mode="date" value="{{dateEnd}}" bindchange="bindDateEndChange">
+            <text>{{dateEnd}}</text>
+          </picker>
+    　　</view>
+    </view>
+  </view>

@@ -1,0 +1,64 @@
+<!--pagesCollect/pages/marketManager/marketManager.wxml-->
+<view class="{{map==1?'wrap2':'wrap'}}">
+    <view class="container">
+    <view class="search-container">
+        <input placeholder="请输入市场名称" focus="{{focus}}" class="search-input" bindconfirm="bindConfirmSearch" bindfocus="bindSearchInput" value="{{searchValue}}" bindinput="bindSearchInput" placeholder-class="search_placeholder"/>
+        <image class="icon-search" src="{{'../../../images/common/icon_search@2x.png'}}" bindtap="onClickSearch"/>
+    </view>
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" id="{{cityNames[index].id}}">
+    <view class="citySwitch">{{default}} <image class="pic" src="../../../images/common/icon_dropdown@2x.png"></image></view>
+  </picker>
+</view>
+</view>
+<!-- 地图 -->
+<view class="map" wx:if="{{map==1}}">
+<!-- <view class="map" wx:if="{{map==4}}"> -->
+    <map
+        id="myMap"
+        subkey="{{subKey}}"
+        latitude="{{latitude}}"
+        circles="{{circles}}"
+        longitude="{{longitude}}"
+        scale="{{scale}}"
+        markers="{{markers}}"
+        covers="{{covers}}"
+        enable-3D="{{enable3d}}"
+        show-compass="{{showCompass}}"
+        enable-zoom="{{enableZoom}}"
+        enable-rotate="{{enableRotate}}"
+        enable-satellite="{{enableSatellite}}"
+        enable-traffic="{{enableTraffic}}"
+        enable-overlooking="{{enableOverlooking}}"
+        enable-scroll="{{enableScroll}}"
+        include-points="{{markers}}"
+      >
+    </map>
+    <!-- 地图模式下的市场信息 -->
+    <view class="market-info">
+        <view bindtap="hide" class="arrow"><image class="{{show===false?'arrow-up':'arrow-down'}}" src="/images/icon_dropdown@2x.png"></image></view>
+        <view class="info-box" wx:if="{{show}}">
+            <view class="market-title">
+                <view class="market-name">{{allMarkets[0].marketName}}</view>
+                <view class="market-result-red">近期存在抽检不合格</view>
+            </view>
+            <view class="market-num">最近抽检档口：{{allMarkets[0].checkBooth}}</view>
+            <view class="market-time">最近抽检时间：{{allMarkets[0].checkDate}}</view>
+        </view>
+        
+        <view class="button">
+            <view class="btn-back" bindtap="returnTo">返回列表</view>
+            <view class="btn-into" bindtap="enter">进入市场</view>
+    </view>
+</view>
+
+</view>
+<!-- 列表模式 -->
+<view class="market">
+    <!-- <market wx:if="{{marketList.rows.length>0&&map==0}}" bindtap="shopList" market="{{marketList.rows}}"/> -->
+    <market wx:if="{{marketList.length>0&&map==0}}" market="{{marketList}}"/>
+    <empty wx:if="{{marketList.length==0&&map==0}}" text="{{noMarket}}"/>
+</view>
+<!-- <view ></view> -->
+<!-- <image bindtap="mapMode" wx:if="{{marketCount!=0&&map==0}}" class="icon-map" src="../../../images/collect/icon_map_green@2x.png"></image> -->
+<image bindtap="mapMode" wx:if="{{marketCount!=0&&map==1}}" class="icon-map" src="../../../images/collect/icon_map_green@2x.png"></image>
+<!-- 市场信息 -->

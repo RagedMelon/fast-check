@@ -1,0 +1,30 @@
+<!--pagesCollect/pages/myAccount/myAccount.wxml-->
+<view class="header">
+    <view class="header-box">
+        <view class="header-left">
+            <view class="name">{{userName}}</view>
+            <view class="department">所属部门：{{department}}</view>
+        </view>
+        <view class="header-right">
+            <image src="{{avatar}}"></image>
+        </view> 
+    </view>
+</view>
+<view class="info">
+    <view class="info-box" bindtap="changePw">
+        <view><image src="../../../images/common/icon_my_password@2x.png"  class="icon"></image>修改密码</view>
+        <view class="arrow-right"><image src="../../../images/common/icon_more@2x.png"></image></view>
+    </view>
+    <view class="info-box">
+        <view><image src="../../../images/common/icon_my_version@2x.png"  class="icon"></image>版本信息</view>
+        <view class="arrow-right"><image src="../../../images/common/icon_more@2x.png"></image></view>
+    </view>
+</view>
+<view class="logout">
+    <view class="logout-box" bindtap="logOut">退出登录</view>
+</view>
+
+<tabbar tabbarData="{{tabbar}}" active="{{2}}" bgcolor="{{bgcolor}}" color="{{color}}" selectedColor="{{selectedColor}}" showborder="{{showborder}}"  bind:tapChange="tabbarChange" />
+
+
+

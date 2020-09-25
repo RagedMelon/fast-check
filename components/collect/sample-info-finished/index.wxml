@@ -1,0 +1,41 @@
+<!--components/collect/index/index.wxml-->
+<wxs module="sampleCode">
+var toHide = function(array) {
+  var newCode = array.substring(0, 1) + '*****' + array.substring(array.length-3);
+  return newCode;
+}
+module.exports.toHide = toHide;
+</wxs>
+<view class="sample-info">
+    <view class="row">
+        <view class="tag"><text class="star-red">*</text>样品名称</view>
+        <view  class="fill">{{sampleInfo.businessProductDto.productName}}</view>
+    </view>
+    <view class="row">
+        <view class="tag"><text class="star-red">*</text>样品码</view>
+        <view  class="fill" wx:if="{{sampleInfo.sampleCode}}">{{sampleCode.toHide(sampleInfo.sampleCode)}}</view>
+    </view>
+    <view class="row">
+        <view class="tag"><text class="star-red">*</text>进货日期</view>
+        <view class="fill">{{sampleInfo.inDate}}</view>
+    </view>
+    <view class="row">
+        <view class="tag"><text class="star-red">*</text>样品产地</view>
+        <view  class="fill">{{sampleInfo.place}}</view>
+    </view>
+    <view class="row">
+        <view class="tag"><text class="star-red">*</text>供应商名称</view>
+        <view  class="fill">{{sampleInfo.supplier}}</view>
+    </view>
+    <view class="row certificate">
+        <view class="tag">证明材料</view>
+        <view class="info">
+                    <image wx:for="{{picUrl}}" wx:key="index" class="pic" src="{{item}}"></image>
+                </view>
+        <!-- <view class="info">
+            <image class="certification" src="{{picUrl}}"></image>
+        </view> -->
+        <!-- <view >只支持jpg、png格式<image bindtap="upload" class="icon-add" src="../../../images/collect/icon_add_yellow@2x.png"></image></view> -->
+    </view>
+    <!-- <view class="more-sample"><image class="icon-add-green" src="../../../images/collect/icon_add_green@2x.png"></image>添加样品</view> -->
+</view>

@@ -1,0 +1,49 @@
+<!--pagesCollect/pages/shopInfo/shopInfo.wxml-->
+<view >
+    <view class="owner-info">
+        <view class="title">
+        <image src="../../../images/collect/icon_operator_green@2x.png" class="icon-owner"></image>
+        <text>经营者信息</text>
+        </view>
+        <view class="switch" bindtap="hide">
+            <text >收起</text>
+            <image class="{{hide==false?'up':'down'}}" src="../../../images/icon_packup@2x.png"></image>
+        </view>
+    </view>
+    <view class="box">
+        <view class="belong row">
+            <view class="tag">所属市场</view>
+            <view class="info"><input class="input" placeholder="请输入所属市场" placeholder-class="holder"/></view>
+        </view>
+        <view class="name row">
+            <view class="tag">档口名称</view>
+            <view class="info"><input class="input" placeholder="请输入档口名称" placeholder-class="holder"/></view>
+        </view>
+        <view class="info-flex" wx:if="{{!hide}}">
+            <view class="num row">
+                <view class="tag">档口编号</view>
+                <view class="info"><input class="input" placeholder="请输入档口编号" placeholder-class="holder"/></view>
+            </view>
+            <view class="owner row">
+                <view class="tag">经营者姓名</view>
+                <view class="info"><input class="input" placeholder="请输入经营者姓名" placeholder-class="holder"/></view>
+            </view>
+            <view class="phone row">
+                <view class="tag">联系电话</view>
+                <view class="info"><input class="input" placeholder="请输入联系电话" placeholder-class="holder"/></view>
+            </view>
+            <view class="idNum row">
+                <view class="tag">身份证号码</view>
+                <view class="info"><input class="input" placeholder="请输入身份证号" placeholder-class="holder"/></view>
+            </view>
+            <view class="certificate row">
+                <view class="tag">营业执照</view>
+                <view class="info">
+                    <text class="holder">只支持jpg、png格式</text>
+                    <image class="icon-add" bindtap="addPic" src="../../../images/icon_add_yellow@2x.png"></image>
+                </view>
+            </view>
+        </view>
+        
+    </view>
+</view>

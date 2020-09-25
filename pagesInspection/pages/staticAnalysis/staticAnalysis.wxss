@@ -1,0 +1,195 @@
+/* pagesCollect/pages/staticAnalysis/staticAnalysis.wxss */
+
+page {
+    background-color: #f2f3f5;
+}
+
+.statics-page {
+    width: 686rpx;
+    margin: 0 auto;
+}
+
+
+/* 筛选器 */
+
+.filter {
+    margin: 16rpx auto;
+    width: 622rpx;
+    /* height: 178rpx; */
+    border-radius: 24rpx;
+    background-color: rgba(255, 255, 255, 1);
+    padding: 0 32rpx;
+}
+
+.range {
+    color: rgba(128, 128, 128, 1);
+    /* color: black; */
+    font-size: 28rpx;
+    height: 88rpx;
+    line-height: 88rpx;
+    text-align: left;
+    font-family: Alibaba-PuHuiTi-R;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2rpx solid #FAFAFA;
+}
+
+.range-selected {
+    width: 200rpx;
+    text-align: center;
+}
+
+.range-selected .text {
+    color: black;
+    display: inline-block;
+    /* width: 140rpx; */
+}
+
+.range-selected .pic {
+    width: 18rpx;
+    height: 12rpx;
+    margin-left: 24rpx;
+    vertical-align: middle;
+}
+
+.timePicker {
+    color: rgba(128, 128, 128, 1);
+    font-size: 28rpx;
+    height: 88rpx;
+    line-height: 88rpx;
+    text-align: left;
+    font-family: Alibaba-PuHuiTi-R;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2rpx solid #FAFAFA;
+}
+
+.select-box {
+    position: absolute;
+    top: 88rpx;
+    right: 0;
+    padding: 16rpx;
+    background-color: #fff;
+    text-align: center;
+    border: 2rpx solid #f2f3f5;
+    border-radius: 24rpx;
+    z-index: 2;
+    max-height: 400rpx;
+    overflow: scroll;
+}
+
+.second {
+    color: rgba(128, 128, 128, 1);
+    font-size: 28rpx;
+    height: 88rpx;
+    line-height: 88rpx;
+    text-align: left;
+    font-family: Alibaba-PuHuiTi-R;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    /* border-bottom: 2rpx solid #FAFAFA; */
+}
+
+.second-selected {
+    width: 200rpx;
+    text-align: center;
+}
+
+.second-selected .text {
+    color: rgba(204, 204, 204, 1);
+    display: inline-block;
+    width: 140rpx;
+}
+
+.second-selected .pic {
+    width: 18rpx;
+    height: 12rpx;
+    margin-left: 24rpx;
+    vertical-align: middle;
+}
+
+
+/* 表格 */
+
+.statics-num {
+    width: 622rpx;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 24rpx;
+    height: 358rpx;
+    padding: 32rpx
+}
+
+.statics-num .row {
+    display: flex;
+    height: 50%;
+}
+
+.statics-num .row1 {
+    border-bottom: 2rpx solid rgba(250, 250, 250, 1);
+}
+
+.row .item {
+    width: 50%;
+    text-align: center;
+    padding-top: 32rpx;
+}
+
+.row .item1 {
+    border-right: 2rpx solid rgba(250, 250, 250, 1);
+}
+
+.item .num {
+    color: rgba(255, 197, 26, 1);
+    font-size: 48rpx;
+    text-align: center;
+    font-family: Alibaba-PuHuiTi-M;
+}
+
+.item .num text {
+    color: #62D664;
+}
+
+.item .text {
+    color: rgba(128, 128, 128, 1);
+    font-size: 28rpx;
+    text-align: center;
+    font-family: Alibaba-PuHuiTi-R;
+}
+
+
+/* 图表 */
+
+.charts {
+    padding: 32rpx 0;
+}
+
+.icon-charts {
+    width: 36rpx;
+    height: 36rpx;
+    vertical-align: middle;
+    margin-right: 16rpx;
+}
+
+.msg-charts {
+    width: 632rpx;
+    height: 36rpx;
+    line-height: 36rpx;
+    color: rgba(128, 128, 128, 1);
+    font-size: 28rpx;
+    /* text-align: left; */
+    font-family: Alibaba-PuHuiTi-R;
+}
+
+.wrap {
+    width: 100%;
+    height: 728rpx;
+    padding-top: 32rpx;
+    padding-bottom: 100rpx;
+    margin-bottom: 32rpx;
+    background-color: #fff;
+    border-radius: 24rpx;
+}

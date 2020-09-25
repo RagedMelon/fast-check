@@ -1,0 +1,7 @@
+<view class="container">
+    <view class="search-container">
+        <input placeholder="请输入市场名称" class="search-input" bindconfirm="bindConfirmSearch" bindfocus="bindSearchInput" value="{{searchValue}}" bindinput="bindSearchInput" placeholder-class="search_placeholder" auto-focus />
+        <image class="icon-search" src="{{'../../../images/common/icon_search@2x.png'}}" bindtap="onClickSearch"/>
+    </view>
+    <view class="citySwitch">珠海市 <image class="pic" src="../../../images/common/icon_dropdown@2x.png"></image></view>
+</view>

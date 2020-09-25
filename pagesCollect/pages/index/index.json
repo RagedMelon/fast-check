@@ -1,0 +1,11 @@
+{
+    "usingComponents": {
+        "notice-bar": "../../../components/collect/notice-bar/index",
+        "carousel": "../../../components/collect/carousel/index",
+        "icon-pages": "../../../components/collect/icon-pages/index",
+        "task-box": "../../../components/collect/task-box/index",
+        "tabbar": "../../../components/collect/tabbar/index",
+        "empty": "../../../components/collect/empty/index"
+
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "usingComponents": {
+        "carousel": "../../../components/inspection/carousel/index",
+        "icon-pages": "../../../components/inspection/icon-pages/index",
+        "homepage-bar": "../../../components/inspection/homepage-bar/index",
+        "to-be-tested": "../../../components/inspection/to-be-tested/index",
+        "tabbar": "../../../components/inspection/tabbar/index",
+        "sample": "../../../components/inspection/sample/index",
+        "empty": "../../../components/inspection/empty/index"
+
+
+    }
+}

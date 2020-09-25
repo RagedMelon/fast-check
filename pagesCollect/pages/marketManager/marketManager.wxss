@@ -1,0 +1,187 @@
+/* pagesCollect/pages/marketManager/marketManager.wxss */
+
+page {
+    background-color: #f2f3f5;
+}
+
+
+/* 搜索框 */
+
+.wrap {
+    background-color: #fff;
+    margin-bottom: 32rpx;
+}
+
+.wrap2 {
+    background-color: #fff;
+    /* margin-bottom: 32rpx; */
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.container {
+    height: 120rpx;
+    flex-direction: row;
+    padding: 22rpx 32rpx;
+}
+
+.search-container {
+    width: 504rpx;
+    height: 56rpx;
+    line-height: 56rpx;
+    border-radius: 28rpx;
+    background-color: rgba(255, 255, 255, 1);
+    border: 1px solid rgba(241, 241, 241, 1);
+    position: relative;
+    color: rgba(204, 204, 204, 1);
+    font-size: 28rpx;
+    text-align: left;
+    font-family: Alibaba-PuHuiTi-R;
+    padding-left: 32rpx;
+}
+
+.search-container .icon-search {
+    width: 30rpx;
+    height: 30rpx;
+    position: absolute;
+    right: 34rpx;
+    top: 14rpx;
+    z-index: 5;
+}
+
+.search-container .search-input {
+    width: 100%;
+    height: 100%;
+    color: black;
+}
+
+.citySwitch {
+    width: 120rpx;
+    color: rgba(52, 52, 52, 1);
+    font-size: 28rpx;
+    text-align: right;
+    font-family: Alibaba-PuHuiTi-R;
+}
+
+.citySwitch .pic {
+    width: 16rpx;
+    height: 12rpx;
+    color: #62D664;
+    vertical-align: middle;
+}
+
+.market {
+    width: 686rpx;
+    margin: 0 auto;
+}
+
+.icon-map {
+    width: 176rpx;
+    height: 80rpx;
+    position: fixed;
+    right: 0;
+    top: 152rpx;
+}
+
+.map {
+    width: 100%;
+}
+
+map {
+    height: 1100rpx;
+    width: 100%;
+}
+
+.market-info {
+    width: 686rpx;
+    padding: 0 32rpx 32rpx;
+    background-color: rgba(255, 255, 255, 1);
+    position: fixed;
+    bottom: 0;
+    border-radius: 24rpx 24rpx 0 0;
+}
+
+.arrow {
+    text-align: center;
+}
+
+.arrow-up {
+    width: 16rpx;
+    height: 10rpx;
+    transform: rotate(180deg);
+    transition: All 0.3s ease-in-out;
+}
+
+.arrow-down {
+    width: 16rpx;
+    height: 10rpx;
+    transition: All 0.3s ease-in-out;
+}
+
+.market-title {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 32rpx;
+}
+
+.market-name {
+    color: rgba(51, 51, 51, 1);
+    font-size: 28rpx;
+    font-family: Alibaba-PuHuiTi-M;
+}
+
+.market-result-red {
+    color: rgba(255, 77, 77, 1);
+    font-size: 24rpx;
+    font-family: Alibaba-PuHuiTi-R;
+}
+
+.market-num,
+.market-time {
+    color: rgba(128, 128, 128, 1);
+    font-size: 24rpx;
+    font-family: Alibaba-PuHuiTi-R;
+}
+
+.market-num {
+    margin-bottom: 16rpx;
+}
+
+.market-time {
+    margin-bottom: 32rpx;
+}
+
+.button {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-back {
+    width: 326rpx;
+    height: 64rpx;
+    line-height: 64rpx;
+    border-radius: 32rpx;
+    background-color: rgba(255, 255, 255, 1);
+    border: 2rpx solid rgba(242, 242, 242, 1);
+    color: rgba(255, 197, 26, 1);
+    font-size: 24rpx;
+    text-align: center;
+    font-family: Alibaba-PuHuiTi-R;
+}
+
+.btn-into {
+    width: 326rpx;
+    height: 64rpx;
+    line-height: 64rpx;
+    border-radius: 32rpx;
+    background-color: rgba(255, 197, 26, 1);
+    font-size: 24rpx;
+    text-align: center;
+    color: white;
+    box-shadow: 0 20rpx 20rpx 0 rgba(255, 197, 26, 0.2);
+}

@@ -1,0 +1,22 @@
+<!--components/collect/index/index.wxml-->
+<view 
+    class="shop" 
+    bindtap="jumpToDetails" 
+    wx:for="{{info}}" id="{{item.id}}" 
+    data-boothcode="{{item.boothCode}}" 
+    data-bussinessmancode="{{item.businessmanCode}}" 
+    data-licence="{{item.businessLicenceFileIds}}"
+    data-missionid="{{missionId}}" 
+    wx:key="index">
+        <view class="row-top">
+            <view class="shopName">{{item.boothName}}</view>
+            <view class="result" wx:if="{{!item.isPass}}">{{result}}</view>
+        </view>
+        <view class="shopNum">档口编号：{{item.boothCode}}</view>
+        <view class="owner">经营者姓名：{{item.manager}}</view>
+        <view class="phone">联系电话：{{item.managerPhone}}</view>
+        <view class="row-bottom">
+            <view class="check-date">最近抽检时间：{{item.checkDate}}</view>
+            <view class="sample" id="{{item.id}}">采样</view>
+        </view>
+    </view>

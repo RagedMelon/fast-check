@@ -1,0 +1,32 @@
+<!--pagesCollect/pages/punchInStat/punchInStat.wxml-->
+<view class="statPage">
+    <view class="overview">
+        <picker mode="date" value="{{date}}" bindchange="bindDateChange">
+                <view class="month">{{year}}年{{month}}月汇总<image src="../../../images/collect/icon_dropdown@2x.png"></image></view>
+        </picker>
+        <!-- <view class="month">{{year}}年{{month}}月汇总<image src="../../../images/collect/icon_dropdown@2x.png"></image></view> -->
+        <view class="stat">
+            <view class="clockin-counts">
+                <view class="num">{{stat.clockNumber}}</view>
+                <view class="text">打卡次数</view>
+            </view>
+            <view class="market-counts">
+                <view class="num">{{stat.marketNumber}}</view>
+                <view class="text">打卡市场数</view>
+            </view>
+        </view>
+    </view>
+    <!-- 打卡记录 -->
+    <view class="record">
+        <image src="../../../images/collect/icon_clockin_record@2x.png" class="icon-record"></image>
+        <text class="msg-record">打卡记录</text>
+    </view>
+    <view class="table" wx:if="{{stat.clockNumber>0}}">
+        <view class="info" wx:for="{{record.rows}}" wx:key="index">
+            <view class="market-name">{{item.marketInfoName}}</view>
+            <view class="clockin-date">{{item.clockInTime}}</view>
+        </view>
+    </view>
+    <empty wx:if="{{stat.clockNumber==0}}" text="{{content}}"/>
+
+</view>

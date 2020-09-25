@@ -1,0 +1,20 @@
+/* components/collect/index/index.wxss */
+
+.table-no {
+    background-color: #fff;
+    border-radius: 24rpx;
+    /* margin: 16rpx 0; */
+    height: 1288rpx;
+    text-align: center;
+    color: rgba(153, 153, 153, 1);
+    font-size: 28rpx;
+    text-align: center;
+    font-family: Alibaba-PuHuiTi-R;
+    margin-bottom: 32rpx;
+}
+
+.table-no .pic {
+    width: 256rpx;
+    margin: 160rpx 0 32rpx;
+    height: 168rpx;
+}

@@ -1,0 +1,5 @@
+<!--components/collect/index/index.wxml-->
+<view class="task-stage">
+    <view class="{{option==0?'stage-selected':''}}" bindtap="checkStatus">未完成</view>
+    <view class="{{option==1?'stage-selected':''}}" bindtap="checkStatus2">已完成</view>
+</view>

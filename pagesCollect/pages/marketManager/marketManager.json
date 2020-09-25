@@ -1,0 +1,9 @@
+{
+    "usingComponents": {
+        "common-search": "../../../components/collect/common-search/common-search",
+        "empty": "../../../components/collect/empty/index",
+        "market": "../../../components/collect/market/index"
+    },
+    "navigationBarTitleText": "市场管理"
+
+}

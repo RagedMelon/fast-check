@@ -1,0 +1,257 @@
+/* pagesInspection/pages/readIn/readIn.wxss */
+
+page {
+    background-color: #f2f3f5;
+}
+
+.test-result {
+    background-color: #fff;
+    border-radius: 24rpx;
+    width: 622rpx;
+    padding: 0 32rpx;
+    margin: 0 auto 16rpx;
+    color: rgba(51, 51, 51, 1);
+    font-size: 28rpx;
+    font-family: Alibaba-PuHuiTi-R;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    height: 72rpx;
+    line-height: 72rpx;
+    border: 2rpx solid rgba(250, 250, 250, 1);
+    position: relative;
+}
+
+.description {
+    height: 100%;
+    /* line-height: 72rpx; */
+    line-height: 48rpx;
+    padding: 16rpx 0;
+}
+
+.photos {
+    height: 124rpx;
+    line-height: 124rpx;
+}
+
+.tag {
+    color: rgba(128, 128, 128, 1);
+}
+
+.test-value {
+    display: flex;
+}
+
+.value {
+    width: 166rpx;
+    height: 100%;
+    margin-right: 16rpx;
+    text-align: right;
+}
+
+.positive {
+    color: red
+}
+
+.negative {
+    color: green
+}
+
+.icon {
+    width: 18rpx;
+    height: 12rpx;
+    margin-left: 18rpx;
+    vertical-align: middle;
+}
+
+.list {
+    background-color: #fff;
+    border: solid 2rpx #f2f3f5;
+    z-index: 5;
+    position: absolute;
+    top: 72rpx;
+    right: 0;
+    max-height: 500rpx;
+    overflow: scroll;
+}
+
+.item {
+    text-align: center;
+    padding: 16rpx;
+}
+
+.icon-cam {
+    width: 32rpx;
+    height: 27rpx;
+    margin-left: 18rpx;
+    vertical-align: middle;
+    position: absolute;
+    right: 0rpx;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.pics-box {
+    padding-right: 48rpx;
+}
+
+.proof {
+    width: 134rpx;
+    height: 100%;
+}
+
+.explain {
+    min-height: 56rpx;
+    line-height: 28rpx;
+    font-size: 28rpx;
+    width: 400rpx;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    word-break: normal;
+}
+
+.add {
+    text-align: center;
+    font-size: 28rpx;
+    color: #62D664;
+}
+
+.icon-small {
+    vertical-align: middle;
+    margin-right: 18rpx;
+}
+
+.del-sample {
+    text-align: center;
+    font-size: 28rpx;
+    color: red;
+    margin-bottom: 32rpx;
+}
+
+.icon-add {
+    width: 32rpx;
+    height: 32rpx;
+    vertical-align: middle;
+    margin-right: 18rpx;
+}
+
+.holder {
+    color: rgba(204, 204, 204, 1);
+}
+
+.btn-row {
+    width: 686rpx;
+    margin: 32rpx auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* .save {
+    width: 326rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    border-radius: 40rpx;
+    background-color: rgba(255, 255, 255, 1);
+    border: 2rpx solid rgba(242, 242, 242, 1);
+    color: rgba(255, 197, 26, 1);
+    text-align: center;
+} */
+
+.submit {
+    width: 100%;
+    height: 80rpx;
+    line-height: 80rpx;
+    border-radius: 40rpx;
+    background-color: rgba(255, 197, 26, 1);
+    box-shadow: 0 20rpx 20rpx 0 rgba(255, 197, 26, 0.2);
+    color: white;
+    text-align: center;
+}
+
+
+/* 自定义modal */
+
+.mask {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    z-index: 9000;
+    opacity: 0.7;
+}
+
+.modalDlg {
+    width: 532rpx;
+    height: 444rpx;
+    position: fixed;
+    top: 320rpx;
+    z-index: 9999;
+    margin-left: 55rpx;
+    background-color: #fff;
+    border-radius: 16rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50rpx;
+}
+
+.icon-warn {
+    width: 96rpx;
+    height: 96rpx;
+    margin-bottom: 50rpx
+}
+
+.title {
+    color: rgba(51, 51, 51, 1);
+    font-size: 32rpx;
+    text-align: center;
+    font-family: Alibaba-PuHuiTi-M;
+    font-weight: bold;
+    margin-bottom: 8rpx;
+}
+
+.red {
+    color: red;
+}
+
+.question {
+    color: rgba(128, 128, 128, 1);
+    font-size: 28rpx;
+    text-align: center;
+    font-family: Alibaba-PuHuiTi-R;
+    margin-bottom: 48rpx;
+}
+
+.btn {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.no {
+    width: 202rpx;
+    height: 64rpx;
+    line-height: 64rpx;
+    border-radius: 40rpx;
+    background-color: rgba(255, 255, 255, 1);
+    border: 2rpx solid rgba(242, 242, 242, 1);
+    color: rgba(255, 197, 26, 1);
+    text-align: center;
+    /* margin-right: 16rpx; */
+}
+
+.yes {
+    width: 202rpx;
+    height: 64rpx;
+    line-height: 64rpx;
+    border-radius: 36rpx;
+    background-color: rgba(255, 197, 26, 1);
+    box-shadow: 0 20rpx 20rpx 0 rgba(255, 197, 26, 0.2);
+    color: white;
+    text-align: center;
+}

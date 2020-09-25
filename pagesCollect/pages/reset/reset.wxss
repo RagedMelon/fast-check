@@ -1,0 +1,53 @@
+/* pagesCollect/pages/reset/reset.wxss */
+
+page {
+    background-color: #f2f3f5;
+}
+
+.reset {
+    width: 686rpx;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 24rpx;
+}
+
+.reset-box {
+    width: 622rpx;
+    height: 1176rpx;
+    margin: 32rpx auto 0;
+    border-radius: 24rpx;
+    padding: 32rpx 0;
+}
+
+.info-box {
+    display: flex;
+    justify-content: space-between;
+    height: 72rpx;
+    line-height: 72rpx;
+    font-size: 28rpx;
+    border-bottom: 2rpx solid rgba(250, 250, 250, 1);
+}
+
+.info-box .left {
+    color: rgba(128, 128, 128, 1);
+    font-family: Alibaba-PuHuiTi-R;
+}
+
+.info-box input {
+    text-align: right;
+    padding-top: 16rpx;
+}
+
+.input-placeholder {
+    color: rgba(204, 204, 204, 1);
+}
+
+.btn {
+    color: white;
+    width: 686rpx!important;
+    height: 80rpx;
+    border-radius: 40rpx;
+    background-color: rgba(255, 197, 26, 1);
+    box-shadow: 0 20rpx 20rpx 0 rgba(255, 197, 26, 0.2);
+    margin: 32rpx auto;
+}
