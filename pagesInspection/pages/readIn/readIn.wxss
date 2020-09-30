@@ -246,7 +246,6 @@ page {
     border: 2rpx solid rgba(242, 242, 242, 1);
     color: rgba(255, 197, 26, 1);
     text-align: center;
-    /* margin-right: 16rpx; */
 }
 
 .yes {
@@ -258,4 +257,50 @@ page {
     box-shadow: 0 20rpx 20rpx 0 rgba(255, 197, 26, 0.2);
     color: white;
     text-align: center;
+}
+
+
+/* 备检结果样式 */
+
+.owner-info {
+    display: flex;
+    justify-content: space-between;
+    width: 686rpx;
+    margin: 32rpx auto;
+}
+
+.icon-owner {
+    width: 36rpx;
+    height: 36rpx;
+    vertical-align: middle;
+    margin-right: 16rpx;
+}
+
+.owner-info .title {
+    font-size: 28rpx;
+    font-family: Alibaba-PuHuiTi-R;
+    font-weight: normal;
+}
+
+.switch {
+    color: rgba(204, 204, 204, 1);
+    font-size: 28rpx;
+    font-family: Alibaba-PuHuiTi-R;
+}
+
+.switch .up {
+    width: 18rpx;
+    height: 12rpx;
+    vertical-align: middle;
+    margin-left: 18rpx;
+    transition: All 0.3s ease-in-out;
+}
+
+.switch .down {
+    width: 18rpx;
+    height: 12rpx;
+    vertical-align: middle;
+    margin-left: 18rpx;
+    transform: rotate(180deg);
+    transition: All 0.3s ease-in-out;
 }

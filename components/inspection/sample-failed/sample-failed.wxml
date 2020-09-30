@@ -1,39 +1,120 @@
 <!--components/collect/index/index.wxml-->
-<view class="sample-item" wx:for="{{list}}" wx:key="index">
-    <view class="item-title">
-        <view class="title">{{item.productName}}</view>
-        <view class="time">{{item.sampleDate}}</view>
-    </view>
-    <view class="item-info">
-        所属市场：{{item.marketName}}
-    </view>
-    <view class="item-info">
-        档口号：
-    </view>
-    <view class="item-info">
-        采样人：{{item.sampleUserName}}
-    </view>
-    <!-- 未处理 -->
-    <view class="item-info last" wx:if="{{!item.isHandle}}">
-        <view>
-            检验项目：
+<view class="sample-item" wx:for="{{list}}" wx:key="index" catchtap="{{item.isHandle?'':'editResult'}}" data-code="{{item.sampleCode}}">
+    <view class="main">
+        <view class="item-title">
+            <view class="title">{{item.productName}}</view>
+            <view class="time">{{item.inspects[0].inspectDate}}</view>
+        </view>
+        <view class="item-info">
+            所属市场：{{item.marketName}}
+        </view>
+        <view class="item-info">
+            <view>档口号：{{item.boothInfoDto.boothCode}}</view>
+        </view>
+        <view class="item-info">
+            采样人：{{item.sampleUserName}}
+        </view>
+        <view class="item-info last">
+            <view >
+                检验项目：
                 <text> {{item.inspects[0].checkItemName}}</text>
                 <text wx:if="{{item.checkItems.length>1}}">...</text>
-        </view>
-        <view class="btn-red" data-info="{{item}}" catchtap="handle">处理</view>
-    </view>
-    <!-- 已处理 -->
-    <view class="item-info last" wx:if="{{item.isHandle}}">
-        <view>
-            检验项目：
-                <text> {{item.inspects[0].checkItemName}}</text>
-                <text wx:if="{{item.checkItems.length>1}}">...</text>
-        </view>
-        <view 
+            </view> 
+            <!-- <view class="btn" catchtap="viewReport" data-id="{{item.sampleId}}">检验报告</view> -->
+            
+            <!-- 已处理时 -->
+            <view 
+            wx:if="{{item.isHandle}}"
             class="btn-yellow" 
             catchtap="handledRecord" 
             data-sampleid="{{item.sampleId}}"
             data-code="{{item.sampleCode}}">处理记录</view>
+            <!-- 当未处理时 -->
+            <view 
+                wx:else
+                class="btn-red" 
+                data-info="{{item}}" 
+                catchtap="handle">处理</view>
+            
+        </view>
+        <view class="switch" catchtap="expand" data-id="{{item.sampleId}}" wx:key="index">
+            <text >{{item.insert?tip2:tip}}</text>
+            <image class="{{item.insert?'up':'down'}}" src="../../../images/icon_packup@2x.png"></image>
+        </view>
     </view>
+    <!-- 备检记录 -->
+    <view 
+        class="sub" 
+        hidden="{{item.insert?'':'true'}}" 
+        wx:for="{{item.reinspects}}" 
+        wx:for-item="reinspection"
+        wx:key="index">
+        <view class="record">
+            <view class="item-title">
+                <view class="title">备检记录</view>
+                <view class="time">{{reinspection.inspectDate}}</view>
+            </view>
+            <view class="item-info">
+                检验项目：{{reinspection.checkItemName}}
+            </view>
+            <view class="item-info">
+                试剂厂家：{{reinspection.inspectDate}}
+            </view>
+            <view class="item-info">
+                检测结果：
+                <text wx:if="{{reinspection.inspectResult=='NEGATIVE'}}" class="negative">阴性 合格</text>
+                <text wx:if="{{reinspection.inspectResult=='POSITIVE'}}" class="positive">阳性 不合格</text>
+            </view>
+        </view>
+    </view>
+    <!-- 当无备检记录时 -->
+    <view 
+        class="sub-2" 
+        hidden="{{item.insert?'':'true'}}" 
+        wx:if="{{item.reinspects.length==0}}">
+        <view class="empty" >
+            <view class="title">备检记录</view>
+            <view class="time">暂无</view> 
+        </view>
+    </view>
+
+    <!-- 留样记录 -->
+    <view 
+        class="sub" 
+        hidden="{{item.insert?'':'true'}}" 
+        wx:for="{{item.reserveds}}" 
+        wx:for-item="reserveds"
+        wx:key="index">
+        <view class="record">
+            <view class="item-title">
+                <view class="title">留样记录</view>
+                <view class="time">{{reserveds.inspectDate}}</view>
+            </view>
+            <view class="item-info">
+                检验项目：{{reserveds.checkItemName}}
+            </view>
+            <view class="item-info">
+                试剂厂家：{{reserveds.inspectDate}}
+            </view>
+            <view class="item-info">
+                检测结果：
+                <text wx:if="{{reserveds.inspectResult=='NEGATIVE'}}" class="negative">阴性 合格</text>
+                <text wx:if="{{reserveds.inspectResult=='POSITIVE'}}" class="positive">阳性 不合格</text>
+            </view>
+        </view>
+    </view>
+    <!-- 无留样记录时 -->
+    <view 
+        class="sub-2" 
+        hidden="{{item.insert?'':'true'}}" 
+        wx:if="{{item.reserveds.length==0}}">
+        <!-- <view class="empty" wx:if="{{item.reserveds==[]}}"> -->
+        <view class="empty" >
+            <view class="title">留样记录</view>
+            <view class="time">暂无</view> 
+        </view>
+        
+    </view>
+    
     
 </view>

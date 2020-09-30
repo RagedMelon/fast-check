@@ -20,7 +20,17 @@ Component({
                     boothPic: newVal
                 })
             }
-        }
+        },
+        // 展开收起
+        nameShow: {
+            type: null,
+            observer: function(newVal, oldVal) {
+                this.setData({
+                    showNameList: newVal
+                })
+            }
+
+        },
     },
 
     /**
@@ -68,6 +78,9 @@ Component({
             this.setData({
                 showNameList: !this.data.showNameList
             })
+            let show = this.data.showNameList
+            this.triggerEvent('display', { show })
+
         },
         chooseName(e) {
             console.log(e.currentTarget.dataset, '选择商户名')

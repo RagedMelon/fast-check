@@ -27,6 +27,25 @@ Component({
                 })
             }
         },
+        // 展开收起
+        rangeShow: {
+            type: null,
+            observer: function(newVal, oldVal) {
+                this.setData({
+                    rangeSelect: newVal
+                })
+            }
+
+        },
+        secondShow: {
+            type: null,
+            observer: function(newVal, oldVal) {
+                this.setData({
+                    secondSelect: newVal
+                })
+            }
+
+        },
     },
     data: {
         // 时间起始
@@ -99,11 +118,15 @@ Component({
             this.setData({
                 rangeSelect: !this.data.rangeSelect,
             })
+            let show = this.data.rangeSelect
+            this.triggerEvent('display', { show })
         },
         bindShowsecond() {
             this.setData({
                 secondSelect: !this.data.secondSelect,
             })
+            let show2 = this.data.secondSelect
+            this.triggerEvent('displayTwo', { show2 })
         },
         rangeChosen(e) {
             // console.log(e)

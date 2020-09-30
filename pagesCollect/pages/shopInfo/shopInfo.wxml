@@ -1,4 +1,10 @@
 <!--pagesCollect/pages/shopInfo/shopInfo.wxml-->
-<keeper booth="{{boothInfo}}" certifi="{{businessPic}}" bindgetcodes="getcodes"/>
+  <view class='mask' wx:if="{{blank}}" catchtap="noDisplay"></view>
+<keeper 
+    bind:display="showMask"
+    nameShow="{{blank}}"
+    booth="{{boothInfo}}" 
+    certifi="{{businessPic}}" 
+    bindgetcodes="getcodes"/>
 <random-record month="{{monthRecord}}"/>
 <view class="random" bindtap="random">我要抽检</view>

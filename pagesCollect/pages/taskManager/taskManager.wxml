@@ -1,6 +1,6 @@
 <!--pagesCollect/pages/taskManager/taskManager.wxml-->
 <view class="task-page">
-  <!-- <status-bar change="{{complete}}" bind:stage="switch"/> -->
+  <view class='mask' wx:if="{{blank||blank2}}" catchtap="noDisplay"></view>
   <status-bar bind:stage="switch"/>
   <!-- 未完成 -->
   <task-box wx:if="{{option==0}}" taskList="{{taskList}}"/>
@@ -8,7 +8,18 @@
   <empty wx:if="{{taskList.length==0&&option==0}}" text="{{content}}"/>
   <!-- 已完成 -->
   <view wx:if="{{option==1}}">
-    <filter second="{{taskFilter}}" items="{{taskStatus}}" default="{{taskDefault}}" bind:range="changeRange" bind:status="changeStatus" bind:start="customStart" bind:end="customEnd"/>
+    <filter 
+      rangeShow="{{blank}}"
+      secondShow="{{blank2}}"
+      second="{{taskFilter}}" 
+      items="{{taskStatus}}" 
+      default="{{taskDefault}}" 
+      bind:range="changeRange" 
+      bind:status="changeStatus" 
+      bind:start="customStart" 
+      bind:end="customEnd"
+      bind:display="showMask"
+      bind:displayTwo="showMask2"/>
   
     <task-box taskList="{{taskList}}"/>
   </view>

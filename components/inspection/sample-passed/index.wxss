@@ -3,10 +3,6 @@
 .sample-item {
     width: 686rpx;
     margin: 16rpx auto;
-    /* height: 274rpx; */
-    /* border-radius: 24rpx; */
-    /* background-color: rgba(255, 255, 255, 1); */
-    /* padding: 32rpx; */
 }
 
 .main {

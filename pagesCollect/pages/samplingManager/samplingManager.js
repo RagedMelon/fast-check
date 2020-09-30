@@ -8,6 +8,8 @@ Page({
      * Page initial data
      */
     data: {
+        blank: null,
+        blank2: null,
         complete: 0, //未完成0-已完成1 切换
         status: 1, //待关联1-待填报2
         sampleList: [],
@@ -23,6 +25,25 @@ Page({
         page2: 1,
         rp3: 10,
         page3: 1,
+    },
+
+    // 点击空白隐藏下拉
+    showMask() {
+        this.setData({
+            blank: true
+        })
+    },
+    showMask2() {
+        this.setData({
+            blank2: true
+        })
+    },
+    noDisplay() {
+        console.log('点击蒙层')
+        this.setData({
+            blank: false,
+            blank2: false
+        })
     },
     /**
      * Lifecycle function--Called when page load
@@ -56,6 +77,7 @@ Page({
     getId(e) {
         let that = this
         this.setData({
+            blank: false,
             status: e.detail.current,
             totalPages: 1, //总页数
             rp: 10, //每页多少条数据
@@ -68,6 +90,7 @@ Page({
     // 已完成-时间切换
     changeRange(e) {
         this.setData({
+            blank2: false,
             range: e.detail.change,
             totalPages: 1, //总页数
             rp: 10, //每页多少条数据

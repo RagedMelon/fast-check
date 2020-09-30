@@ -36,7 +36,7 @@
     <view class="row row1">
       <view class="item item1">
         <view class="num"><text>{{dataInfo.hasCheckTimes}}</text>/{{dataInfo.checkTimes}}</view>
-        <view class="text">已完成/检查项目数</view>
+        <view class="text">已完成/批次数</view>
       </view>
       <view class="item">
         <view class="num">{{rate1}}%</view>

@@ -1,5 +1,6 @@
 
 <view class="homePage">
+  <view class='mask' wx:if="{{secondSelect}}" catchtap="noDisplay"></view>
   <!-- <view><image class="loginPic" src="../../images/pic_login_bg.png" mode="bottom"></image></view> -->
   <view class="head">
     <image class="loginPic" src="../../images/pic_login_bg.png"></image>

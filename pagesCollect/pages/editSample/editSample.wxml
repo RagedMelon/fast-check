@@ -13,6 +13,8 @@ var toHide = function(array) {
 module.exports.toHide = toHide;
 </wxs>
 <!--pagesCollect/pages/scanSample/scanSample.wxml-->
+  <view class='mask' wx:if="{{show||showBoothList||showBoothInfo}}" catchtap="noDisplay"></view>
+
 <title-bar title="{{text}}" pic="{{url}}"/>
 <!-- <task-related/> -->
 <!-- 关联任务选项框 -->
@@ -106,7 +108,7 @@ module.exports.toHide = toHide;
                 <image class="pic" src="../../../images/icon_dropdown@2x.png"></image>
                 
             </view>
-            <view class="list2" wx:if="{{showBoothInfo}}">
+            <view class="list2" wx:if="{{showBoothInfo&&boothInfo.length}}">
                 <view 
                     class="name-box" 
                     wx:for="{{boothInfo}}" 

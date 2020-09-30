@@ -80,6 +80,15 @@ Page({
         }]
 
     },
+    // 点击空白隐藏下拉
+    noDisplay() {
+        console.log('点击蒙层')
+        this.setData({
+            show: false,
+            showBoothList: false,
+            showBoothInfo: false
+        })
+    },
     // 根据市场id获取任务列表
     getMarketTasks(marketId) {
         var _this = this;

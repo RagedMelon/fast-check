@@ -1,15 +1,20 @@
 <!--pagesInspection/pages/sampleManager/sampleManager.wxml-->
+  <view class='mask' wx:if="{{blank||blank2}}" catchtap="noDisplay"></view>
 <status-bar bind:stage="switch" comeBack="{{option}}"/>
 <!-- <status-bar bind:stage="switch" change="{{option}}"/> -->
 <filter 
     wx:if="{{option!=0}}" 
+    rangeShow="{{blank}}"
+    secondShow="{{blank2}}"
     second="{{resultFilter}}" 
     items="{{resultStatus}}" 
     default="{{resultDefault}}" 
     bind:range="changeRange" 
     bind:status="changeStatus" 
     bind:start="customStart" 
-    bind:end="customEnd"/>
+    bind:end="customEnd"
+     bind:display="showMask"
+      bind:displayTwo="showMask2"/>
 <!-- <sample bindtap="readIn" samples="{{sampleList}}"/> -->
 <sample samples="{{sampleList}}"/>
 <view class="empty-box">

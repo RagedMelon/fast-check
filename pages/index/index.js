@@ -119,6 +119,12 @@ Page({
         })
         console.log(this.data.passWord, '输入密码')
     },
+    // 点击空白隐藏下拉
+    noDisplay() {
+        this.setData({
+            secondSelect: false
+        })
+    },
     /**
      * 生命周期函数--监听页面加载
      */

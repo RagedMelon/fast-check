@@ -7,6 +7,7 @@ Page({
      * Page initial data
      */
     data: {
+        blank: null,
         id: null, //档口id
         marketId: null, //市场id
         boothInfo: null,
@@ -17,7 +18,19 @@ Page({
         boothCode: '',
         businessManCode: ''
     },
-
+    // 点击空白隐藏下拉
+    showMask() {
+        this.setData({
+            blank: true
+        })
+    },
+    noDisplay() {
+        console.log('点击了蒙层')
+        this.setData({
+            blank: false
+        })
+    },
+    // 跳转到抽检
     random() {
         let businessmanId = this.data.businessmanId
         let boothInfoId = this.data.id

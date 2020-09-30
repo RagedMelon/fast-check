@@ -89,6 +89,13 @@ Page({
         marketId: null, //市场id
 
     },
+    // 点击空白隐藏下拉
+    noDisplay() {
+        console.log('点击蒙层')
+        this.setData({
+            show: false
+        })
+    },
     // 动态添加采样信息
     init: function() {
         let that = this;

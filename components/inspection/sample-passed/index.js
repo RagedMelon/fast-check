@@ -58,7 +58,6 @@ Component({
             })
         },
         editResult(e) {
-            // console.log('跳转到详情页面', e.currentTarget.dataset.info)
             let sampleCode = e.currentTarget.dataset.code
             wx.navigateTo({
                 url: '/pagesInspection/pages/reInspect/reInspect?code=' + sampleCode,

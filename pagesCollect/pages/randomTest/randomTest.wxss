@@ -4,6 +4,17 @@ page {
     background-color: #f2f3f5;
 }
 
+.mask {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: transparent;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+}
+
 .scroll-view {
     /* width: 500rpx; */
     /* overflow-x: hidden; */

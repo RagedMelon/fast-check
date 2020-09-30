@@ -13,6 +13,7 @@ var toHide = function(array) {
 module.exports.toHide = toHide;
 </wxs>
 <!--pagesCollect/pages/scanSample/scanSample.wxml-->
+  <view class='mask' wx:if="{{show||showBoothList||showBoothInfo}}" catchtap="noDisplay"></view>
 <title-bar title="{{text}}" pic="{{url}}"/>
 <!-- <task-related/> -->
 <!-- 关联任务选项框 -->

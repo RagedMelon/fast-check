@@ -9,6 +9,8 @@ Page({
      * Page initial data
      */
     data: {
+        blank: null,
+        blank2: null,
         userId: null,
         completeList: null,
         incompleteList: [],
@@ -41,6 +43,23 @@ Page({
         totalPages: 1, //总页数
         rp: 10, //每页多少条数据
         page: 1 //第几页
+    },
+    // 点击空白隐藏下拉
+    showMask() {
+        this.setData({
+            blank: true
+        })
+    },
+    showMask2() {
+        this.setData({
+            blank2: true
+        })
+    },
+    noDisplay() {
+        this.setData({
+            blank: false,
+            blank2: false
+        })
     },
     // 获取自定义开始时间
     customStart(e) {
@@ -80,6 +99,7 @@ Page({
     // 时间范围切换
     changeRange(e) {
         this.setData({
+            blank: false,
             range: e.detail.change,
             taskList: [], //重置列表
             totalPages: 1, //总页数
@@ -94,6 +114,7 @@ Page({
     },
     changeStatus(e) {
         this.setData({
+            blank2: false,
             status: e.detail.change,
             taskList: [], //重置列表
             totalPages: 1, //总页数

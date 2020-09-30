@@ -8,6 +8,8 @@ Page({
      * Page initial data
      */
     data: {
+        blank: null,
+        blank2: null,
         sampleList: [],
         inspectedPassList: null,
         inspectedFailedList: null,
@@ -34,7 +36,23 @@ Page({
         rp: 10, //每页多少条数据
         page: 1 //第几页
     },
-
+    // 点击空白隐藏下拉
+    showMask() {
+        this.setData({
+            blank: true
+        })
+    },
+    showMask2() {
+        this.setData({
+            blank2: true
+        })
+    },
+    noDisplay() {
+        this.setData({
+            blank: false,
+            blank2: false
+        })
+    },
 
     // 头部切换
     switch (e) {
@@ -65,6 +83,7 @@ Page({
     // 时间范围切换
     changeRange(e) {
         this.setData({
+            blank: false,
             range: e.detail.change,
             sampleList: [], //重置列表
             totalPages: 1, //总页数
@@ -77,6 +96,7 @@ Page({
     // 结果类型切换
     changeStatus(e) {
         this.setData({
+            blank2: false,
             // status: e.detail.change,
             resultDefault: e.detail.change,
             resultOption: e.detail.chooseId,

@@ -9,6 +9,9 @@ Page({
      * Page initial data
      */
     data: {
+        blank: null,
+        blank2: null,
+        blank3: null,
         option: 0,
         // 合格筛选框
         result: [' 合格', '不合格'],
@@ -49,11 +52,35 @@ Page({
         page: 1 //第几页
 
     },
+    // 点击空白隐藏下拉
+    showMask() {
+        this.setData({
+            blank: true
+        })
+    },
+    showMask2() {
+        this.setData({
+            blank2: true
+        })
+    },
+    showMask3() {
+        this.setData({
+            blank3: true
+        })
+    },
+    noDisplay() {
+        console.log('点击蒙层')
+        this.setData({
+            blank: false,
+            blank2: false,
+            blank3: false
+        })
+    },
     // 台账管理返回
     handledComeBack() {
         this.setData({
             option: 1,
-            sampleList: [], //重置列表
+            accountList: [], //重置列表
             totalPages: 1, //总页数
             rp: 10, //每页多少条数据
             page: 1 //第几页
@@ -691,22 +718,12 @@ Page({
     // 点击搜索图标
     onClickSearch: function(e) {
         this.bindConfirmSearch()
-            // this.setData({
-            //     // content: e.detail.value,
-            //     accountList: [], //重置列表
-            //     totalPages: 1, //总页数
-            //     rp: 10, //每页多少条数据
-            //     page: 1 //第几页
-            // })
-            // this.getTheList()
-            // console.log(this.data.accountList)
-
-
 
     },
     // 合格列表时间筛选
     changeRange(e) {
         this.setData({
+            blank: false,
             range: e.detail.change,
             accountList: [], //重置列表
             totalPages: 1, //总页数
@@ -753,6 +770,7 @@ Page({
         console.log(e.detail.change)
             // console.log(this.data.content)
         this.setData({
+            blank2: false,
             failedRange: e.detail.change,
             accountList: [], //重置列表
             totalPages: 1, //总页数
@@ -765,6 +783,7 @@ Page({
     },
     failChangeStatus(e) {
         this.setData({
+            blank3: false,
             failedStatus: e.detail.change,
             accountList: [], //重置列表
             totalPages: 1, //总页数

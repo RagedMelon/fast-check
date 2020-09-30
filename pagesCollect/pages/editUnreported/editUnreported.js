@@ -10,6 +10,7 @@ Page({
      * Page initial data
      */
     data: {
+        blank: null,
         userId: null,
         sampleData: null, //传入的采样信息
         text: '关联任务',
@@ -76,6 +77,15 @@ Page({
             "sampleDate": "" //采样时间
         }]
 
+    },
+    // 点击空白隐藏下拉
+    noDisplay() {
+        console.log('点击蒙层')
+        this.setData({
+            show: false,
+            showBoothList: false,
+            showBoothInfo: false
+        })
     },
     // 根据市场id获取任务列表
     getMarketTasks(marketId) {

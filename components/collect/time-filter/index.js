@@ -2,31 +2,16 @@
 const util = require('../../../utils/util.js')
 Component({
     properties: {
-        // second: {
-        //     type: null,
-        //     observer: function(newVal, oldVal) {
-        //         this.setData({
-        //             secondFilter: newVal
-        //         })
-        //     }
+        // 展开收起
+        timeShow: {
+            type: null,
+            observer: function(newVal, oldVal) {
+                this.setData({
+                    rangeSelect: newVal
+                })
+            }
 
-        // },
-        // items: {
-        //     type: null,
-        //     observer: function(newVal, oldVal) {
-        //         this.setData({
-        //             secondItems: newVal
-        //         })
-        //     }
-        // },
-        // default: {
-        //     type: null,
-        //     observer: function(newVal, oldVal) {
-        //         this.setData({
-        //             secondDefault: newVal
-        //         })
-        //     }
-        // },
+        },
     },
     data: {
         // 时间起始
@@ -74,26 +59,12 @@ Component({
             let change = this.data.dateEnd
             this.triggerEvent('end', { change })
         },
-        // 确定日期区间后执行的函数
-        // sureTime(e) {　　
-        //     this.timeBoxHidden = true　　
-        //     this.fetch({　　
-        //         url: ' ',
-        //         　　success: (data) => {　　　　
-        //             let arr = []　　　　
-        //             data.datas.forEach((item) => {　　　　
-        //                     if (item.applyTime >= this.dateStart && item.applyTime <= this.dateEnd) {　　　　 arr.push(item)　　 }
-        //                 })
-        //                 //article 列表渲染的数据数组
-        //                 　　 this.articles = arr　　
-        //         }
-        //     })　　
-        //     this.scrollToUpper()
-        // },
         bindShowRange() {
             this.setData({
                 rangeSelect: !this.data.rangeSelect,
             })
+            let show = this.data.rangeSelect
+            this.triggerEvent('displayTwo', { show })
         },
         rangeChosen(e) {
             // console.log(e)

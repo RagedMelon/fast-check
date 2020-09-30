@@ -18,6 +18,8 @@ Component({
      * 组件的初始数据
      */
     data: {
+        tip: '展开',
+        tip2: '收起',
         list: null,
         items: [{
                 title: '鸡肉',
@@ -56,6 +58,35 @@ Component({
             wx.navigateTo({
                 url: '/pagesInspection/pages/dealRecord/dealRecord?code=' + code + '&id=' + sampleid,
             })
-        }
+        },
+        // 复检
+        editResult(e) {
+            let sampleCode = e.currentTarget.dataset.code
+            wx.navigateTo({
+                url: '/pagesInspection/pages/reInspect/reInspect?code=' + sampleCode,
+            })
+        },
+        // 展开收缩
+        expand: function(e) {
+            let that = this
+            let index = 0;
+            let array = this.data.list; //获取循环数组对象
+            for (let item of array) {
+                //如果当前点击的对象index和循环对象里的index一致
+                if (item.sampleId == e.currentTarget.dataset.id) {
+                    //判断当前对象中的insert是否为true（true为显示，其他为隐藏） insert是新增的一个值然后进行判断
+                    if (array[index].insert == "" || array[index].insert == undefined) {
+                        array[index].insert = "true"
+                    } else {
+                        array[index].insert = ""
+                    }
+                }
+                index++;
+            }
+            //将数据动态绑定 
+            that.setData({
+                list: array
+            })
+        },
     }
 })

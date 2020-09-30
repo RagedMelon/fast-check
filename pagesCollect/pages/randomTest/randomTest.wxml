@@ -6,6 +6,7 @@ var toHide = function(array) {
 }
 module.exports.toHide = toHide;
 </wxs>
+<view class='mask' wx:if="{{show}}" catchtap="noDisplay"></view>
 <!-- 关联任务标题栏 -->
 <title-bar title="{{text}}" pic="{{url}}"/>
 <!-- 关联任务选项框 -->

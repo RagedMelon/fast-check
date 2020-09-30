@@ -2,31 +2,16 @@
 const util = require('../../../utils/util.js')
 Component({
     properties: {
-        // second: {
-        //     type: null,
-        //     observer: function(newVal, oldVal) {
-        //         this.setData({
-        //             secondFilter: newVal
-        //         })
-        //     }
+        // 展开收起
+        timeShow: {
+            type: null,
+            observer: function(newVal, oldVal) {
+                this.setData({
+                    rangeSelect: newVal
+                })
+            }
 
-        // },
-        // items: {
-        //     type: null,
-        //     observer: function(newVal, oldVal) {
-        //         this.setData({
-        //             secondItems: newVal
-        //         })
-        //     }
-        // },
-        // default: {
-        //     type: null,
-        //     observer: function(newVal, oldVal) {
-        //         this.setData({
-        //             secondDefault: newVal
-        //         })
-        //     }
-        // },
+        },
     },
     data: {
         // 时间起始
@@ -79,6 +64,8 @@ Component({
             this.setData({
                 rangeSelect: !this.data.rangeSelect,
             })
+            let show = this.data.rangeSelect
+            this.triggerEvent('display', { show })
         },
         rangeChosen(e) {
             // console.log(e)

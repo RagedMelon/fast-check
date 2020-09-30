@@ -4,7 +4,16 @@ Component({
      * 组件的属性列表
      */
     properties: {
+        // 展开收起
+        statusShow: {
+            type: null,
+            observer: function(newVal, oldVal) {
+                this.setData({
+                    show: newVal
+                })
+            }
 
+        },
     },
 
     /**
@@ -34,6 +43,9 @@ Component({
             this.setData({
                 show: !this.data.show,
             })
+            let show = this.data.show
+            this.triggerEvent('display', { show })
+
         },
         selected(e) {
             let chosen = e.currentTarget.dataset.name
